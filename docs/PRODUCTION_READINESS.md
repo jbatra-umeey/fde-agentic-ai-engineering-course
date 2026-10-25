@@ -16,7 +16,7 @@ This repository is a course and a runnable engineering reference. Production-ori
 | Observability | Structured events, tenant status metrics, OTel spans/exporter | Confirm collector delivery, dashboards, alerts, retention and runbooks |
 | Packaging | Version-pinned dependencies, Dockerfile, Compose, CI definition | Verify image build/run, pin image digest, dependency/container vulnerability review |
 | Live model | HTTPS adapter and mock transport contract tests | Actual provider compatibility, quality, cost and privacy validation |
-| Documentation | Ten photo-aligned lessons, field guide, capstone and operations | Learner pilot, publication rights review and chosen license |
+| Documentation | Ten illustrated lessons, field guide, capstone and operations | Learner pilot, publication rights review and chosen license |
 
 ## Guarantees deliberately not claimed
 

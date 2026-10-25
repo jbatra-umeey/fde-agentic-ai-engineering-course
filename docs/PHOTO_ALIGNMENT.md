@@ -1,6 +1,6 @@
-# Photo-to-code traceability
+# Concept-to-code traceability
 
-The supplied screenshots define this course's ten-module backbone. Each module preserves its named flow and feedback loop. Additional infrastructure is separated into the implementation architecture. Screenshots are reference material; the course contains newly written explanations and Mermaid diagrams, not copies of the social-media artwork. The screenshots visibly credit @aiwithanuj; review attribution and redistribution rights before public course publication.
+The supplied screenshots define this course's ten-module backbone. Each module preserves its named flow and feedback loop. Additional infrastructure is separated into the implementation architecture. Screenshots are reference material; the course contains newly written explanations, illustrated PNG/SVG guides and Mermaid diagrams, not copies of the social-media artwork. The screenshots visibly credit @aiwithanuj; review attribution and redistribution rights before public course publication.
 
 | Photo | Exact topic | Matching guide | Runnable lesson | Implementation |
 |---|---|---|---|---|
