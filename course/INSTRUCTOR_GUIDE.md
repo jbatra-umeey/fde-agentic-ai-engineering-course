@@ -20,7 +20,7 @@ Use `jev lesson N` for a focused concept and `jev demo --simulate-review` for th
 
 ## Publishing checklist
 
-1. Review the README, all ten diagrams and the photo-to-code map for fidelity.
+1. Review the README, all ten diagrams and the concept-to-code map for fidelity.
 2. Add a publisher-selected license and a clear contribution policy. No license has been selected on the user's behalf.
 3. Review attribution and rights for source inspirations. The supplied screenshots visibly credit @aiwithanuj; the original images are intentionally excluded from the archive. Seek permission if you intend to redistribute them or reproduce the original artwork commercially.
 4. Replace example contact/ownership fields in templates with course-specific details.

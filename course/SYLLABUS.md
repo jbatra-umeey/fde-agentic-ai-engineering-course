@@ -33,7 +33,7 @@ These are planning estimates, not completion guarantees. Progress is assessed by
 
 ## Module completion contract
 
-For every module, read the matching photo-aligned guide, run its lesson, complete its lab, demonstrate its failure case and submit the named artifact. Add a short decision record with: customer constraint, alternatives, selected design, evidence, tradeoff and reversal trigger.
+For every module, read the matching illustrated guide, run its lesson, complete its lab, demonstrate its failure case and submit the named artifact. Add a short decision record with: customer constraint, alternatives, selected design, evidence, tradeoff and reversal trigger.
 
 Pair exercise: one learner is the customer sponsor, one is the FDE, and one is the operator/security reviewer. Rotate roles. The sponsor must ask about measurable value, the operator about recovery, and the reviewer about permissions and data exposure.
 
