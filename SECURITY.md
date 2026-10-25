@@ -32,3 +32,7 @@ The reference demonstrates deterministic authorization and safe local effects. I
 Integrate the customer's identity provider, resource ACLs, secrets manager, TLS ingress, encryption, retention policy and incident response process. Perform threat modeling and adversarial testing with the actual model and datasets. Add a true sandbox if accepting untrusted generated code. Use isolated compute with strict network/filesystem/resource controls; Python `-I` alone is not such a sandbox.
 
 Use the production-readiness matrix to track owners and evidence. Report vulnerabilities privately to the eventual repository owner's chosen contact; add that contact before publication. Never attach real secrets or customer data to public issues.
+
+## Live inference upgrade boundaries
+
+Model endpoints/routes are trusted operator configuration. Fallback must satisfy the same customer data-handling policy as the primary provider. Provider refusals and auth failures never trigger fallback. Raw provider bodies and rejected arguments are excluded from event/trace metadata. Costs are estimates, not monetary enforcement. Live suggested code is inert text; it is never passed to the fixture's trusted-template subprocess. `release_recommendation` is the authoritative structured policy decision; model prose is advisory. See [live configuration](docs/LIVE_INFERENCE.md) and [evaluation limits](docs/EVALUATION.md).

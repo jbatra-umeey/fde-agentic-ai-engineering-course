@@ -15,3 +15,5 @@ dist/
 var/
 backups/
 *.sqlite*
+config/*.local.json
+reports/live-*.json

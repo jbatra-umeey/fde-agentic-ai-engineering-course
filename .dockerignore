@@ -11,3 +11,4 @@ dist
 var
 backups
 reports
+config/*.local.json

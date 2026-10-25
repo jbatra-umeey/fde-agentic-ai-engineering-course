@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jev-agent-engineering"
-version = "0.1.0"
+version = "0.2.0"
 description = "Ten agent engineering disciplines in one executable reference monorepo"
 requires-python = ">=3.12"
 dependencies = [
@@ -33,3 +33,7 @@ line-length = 100
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP"]
 ignore = ["E501"]
+
+[tool.setuptools.package-data]
+jev_core = ["prompts/*.txt"]
+jev_evals = ["datasets/*.json"]
