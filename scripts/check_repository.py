@@ -15,7 +15,7 @@ def main():
         for target in re.findall(r"\]\(([^)]+)\)", content):
             if target.startswith(("https://", "http://", "#", "mailto:")):
                 continue
-            target = target.split("#")[0]
+            target = target.split("#")[0].split("?")[0]
             if not (path.parent / target).exists():
                 failures.append(f"Broken link: {path.relative_to(root)} -> {target}")
     assert len(list((root / "docs/modules").glob("*.md"))) == 10
