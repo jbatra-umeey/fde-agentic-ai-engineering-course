@@ -3,7 +3,7 @@ from jev_cli.lessons import run_lesson
 
 
 @pytest.mark.parametrize("number", range(1, 11))
-async def test_photo_aligned_lesson(number):
+async def test_agent_engineering_lesson(number):
     result = await run_lesson(number)
     assert result
     if number == 5:
