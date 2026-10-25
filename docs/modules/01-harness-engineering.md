@@ -1,7 +1,5 @@
 # 1. Harness Engineering
 
-**Photo alignment:** the title, stages, arrows and feedback direction below follow supplied photo 1. Layout is adapted for readable Markdown; implementation safeguards are explained separately.
-
 ## Customer problem
 
 A customer has an impressive chatbot demo, but it cannot reliably complete a support task. What must surround the model?
@@ -10,7 +8,13 @@ A customer has an impressive chatbot demo, but it cannot reliably complete a sup
 
 The harness is the operating environment around the agent: instructions, identity, context, tools, budgets, persistence and output contracts. The model proposes a next step; the harness decides whether that step is valid.
 
-## Diagram from the photo
+## Illustrated overview
+
+![1. Harness Engineering: illustrated flow and step-by-step explanation](../diagrams/01-harness-engineering.png)
+
+[Download editable SVG](../diagrams/01-harness-engineering.svg)
+
+## Technical flow
 
 ```mermaid
 flowchart LR
@@ -69,5 +73,5 @@ A regulated deployment needs its own retention, access-control and model approva
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Photo-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
 

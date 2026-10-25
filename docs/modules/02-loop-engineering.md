@@ -1,7 +1,5 @@
 # 2. Loop Engineering
 
-**Photo alignment:** the title, stages, arrows and feedback direction below follow supplied photo 2. Layout is adapted for readable Markdown; implementation safeguards are explained separately.
-
 ## Customer problem
 
 An operations team wants an agent to investigate a latency incident without running forever or repeatedly opening tickets.
@@ -10,7 +8,13 @@ An operations team wants an agent to investigate a latency incident without runn
 
 A loop is a sequence of plan, act and observe steps. Each observation changes what the next planning step can see. Learning here means updating the next decision and improving reviewed prompts or policies; it does not mean automatic model-weight training.
 
-## Diagram from the photo
+## Illustrated overview
+
+![2. Loop Engineering: illustrated flow and step-by-step explanation](../diagrams/02-loop-engineering.png)
+
+[Download editable SVG](../diagrams/02-loop-engineering.svg)
+
+## Technical flow
 
 ```mermaid
 flowchart TD
@@ -67,5 +71,5 @@ There is a per-invocation deadline and a durable step budget. Distributed schedu
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Photo-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
 

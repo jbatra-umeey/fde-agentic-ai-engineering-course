@@ -1,7 +1,5 @@
 # 7. Guardrails & Permissions
 
-**Photo alignment:** the title, stages, arrows and feedback direction below follow supplied photo 7. Layout is adapted for readable Markdown; implementation safeguards are explained separately.
-
 ## Customer problem
 
 A model proposes a refund for the wrong customer. Where should the system stop it, even if the model insists?
@@ -10,7 +8,13 @@ A model proposes a refund for the wrong customer. Where should the system stop i
 
 Guardrails validate the request and output. Permissions determine who may access a resource or perform an action. Both are server-side decisions. An instruction in a prompt is not authorization.
 
-## Diagram from the photo
+## Illustrated overview
+
+![7. Guardrails & Permissions: illustrated flow and step-by-step explanation](../diagrams/07-guardrails-and-permissions.png)
+
+[Download editable SVG](../diagrams/07-guardrails-and-permissions.svg)
+
+## Technical flow
 
 ```mermaid
 flowchart TD
@@ -66,5 +70,5 @@ Policy checks are not a full harmful-content classifier or DLP system. OIDC, fin
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Photo-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
 

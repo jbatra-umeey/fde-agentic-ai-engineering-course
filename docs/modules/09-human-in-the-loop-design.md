@@ -1,7 +1,5 @@
 # 9. Human-in-the-Loop Design
 
-**Photo alignment:** the title, stages, arrows and feedback direction below follow supplied photo 9. Layout is adapted for readable Markdown; implementation safeguards are explained separately.
-
 ## Customer problem
 
 The agent should prepare a consequential action, but an accountable person must decide whether it happens.
@@ -10,7 +8,13 @@ The agent should prepare a consequential action, but an accountable person must 
 
 The photo's flow is preserved: a human sets the goal, the agent produces an output, a human reviews it, and feedback informs the next step. For a write operation, the first output is a proposal. The actual effect follows approval so review can still prevent harm.
 
-## Diagram from the photo
+## Illustrated overview
+
+![9. Human-in-the-Loop Design: illustrated flow and step-by-step explanation](../diagrams/09-human-in-the-loop-design.png)
+
+[Download editable SVG](../diagrams/09-human-in-the-loop-design.svg)
+
+## Technical flow
 
 ```mermaid
 flowchart TD
@@ -65,5 +69,5 @@ Approval expires after one hour. There is no notification service or expiry sche
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Photo-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
 

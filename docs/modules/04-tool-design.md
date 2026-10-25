@@ -1,7 +1,5 @@
 # 4. Tool Design
 
-**Photo alignment:** the title, stages, arrows and feedback direction below follow supplied photo 4. Layout is adapted for readable Markdown; implementation safeguards are explained separately.
-
 ## Customer problem
 
 A customer says 'let the agent use our APIs'. Which operations should become tools, and how should failures be represented?
@@ -10,7 +8,13 @@ A customer says 'let the agent use our APIs'. Which operations should become too
 
 A tool is a narrow typed capability, not a general-purpose command channel. Its name, description, input schema, read/write classification and permission boundary tell the agent how it may act.
 
-## Diagram from the photo
+## Illustrated overview
+
+![4. Tool Design: illustrated flow and step-by-step explanation](../diagrams/04-tool-design.png)
+
+[Download editable SVG](../diagrams/04-tool-design.svg)
+
+## Technical flow
 
 ```mermaid
 flowchart TD
@@ -67,5 +71,5 @@ Local write effects are transactional. A remote connector needs downstream idemp
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Photo-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
 

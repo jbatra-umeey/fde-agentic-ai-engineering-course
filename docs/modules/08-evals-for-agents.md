@@ -1,7 +1,5 @@
 # 8. Evals for Agents
 
-**Photo alignment:** the title, stages, arrows and feedback direction below follow supplied photo 8. Layout is adapted for readable Markdown; implementation safeguards are explained separately.
-
 ## Customer problem
 
 The demo looks better after a prompt change. How do you know whether the agent became safer and more useful?
@@ -10,7 +8,13 @@ The demo looks better after a prompt change. How do you know whether the agent b
 
 Evaluation turns customer expectations into repeatable checks. Outcome checks assess the final result; trajectory checks inspect tool behavior; safety checks ensure actions obey policy. Latency is recorded separately so a fast incorrect result never counts as success.
 
-## Diagram from the photo
+## Illustrated overview
+
+![8. Evals for Agents: illustrated flow and step-by-step explanation](../diagrams/08-evals-for-agents.png)
+
+[Download editable SVG](../diagrams/08-evals-for-agents.svg)
+
+## Technical flow
 
 ```mermaid
 flowchart TD
@@ -67,5 +71,5 @@ Five synthetic cases do not establish model quality. Before launch, add labeled 
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Photo-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
 

@@ -1,7 +1,5 @@
 # 10. Observability & Tracing
 
-**Photo alignment:** the title, stages, arrows and feedback direction below follow supplied photo 10. Layout is adapted for readable Markdown; implementation safeguards are explained separately.
-
 ## Customer problem
 
 A customer reports intermittent agent failures. How do you explain what happened without exposing prompts or confidential records in telemetry?
@@ -10,7 +8,13 @@ A customer reports intermittent agent failures. How do you explain what happened
 
 Events record business transitions, metrics summarize outcomes, and traces show nested execution timing. Use the run ID to connect them. Capture enough metadata to diagnose behavior while keeping sensitive payloads out of telemetry.
 
-## Diagram from the photo
+## Illustrated overview
+
+![10. Observability & Tracing: illustrated flow and step-by-step explanation](../diagrams/10-observability-and-tracing.png)
+
+[Download editable SVG](../diagrams/10-observability-and-tracing.svg)
+
+## Technical flow
 
 ```mermaid
 flowchart TD
@@ -68,5 +72,5 @@ An OTLP HTTP exporter is implemented, but no collector/backend deployment is val
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Photo-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
 

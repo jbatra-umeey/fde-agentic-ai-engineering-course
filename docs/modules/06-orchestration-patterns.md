@@ -1,7 +1,5 @@
 # 6. Orchestration Patterns
 
-**Photo alignment:** the title, stages, arrows and feedback direction below follow supplied photo 6. Layout is adapted for readable Markdown; implementation safeguards are explained separately.
-
 ## Customer problem
 
 A release decision needs research, a code artifact, analysis and planning. How can specialists collaborate without losing control of the final recommendation?
@@ -10,7 +8,13 @@ A release decision needs research, a code artifact, analysis and planning. How c
 
 The orchestrator owns assignment, coordination and aggregation. In the reference example, a planning specialist defines bounded work; research, coding and analysis specialists run concurrently; the orchestrator checks their results before returning a recommendation.
 
-## Diagram from the photo
+## Illustrated overview
+
+![6. Orchestration Patterns: illustrated flow and step-by-step explanation](../diagrams/06-orchestration-patterns.png)
+
+[Download editable SVG](../diagrams/06-orchestration-patterns.svg)
+
+## Technical flow
 
 ```mermaid
 flowchart TD
@@ -71,5 +75,5 @@ These specialist agents are deterministic reference workers. The coding worker e
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Photo-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
 

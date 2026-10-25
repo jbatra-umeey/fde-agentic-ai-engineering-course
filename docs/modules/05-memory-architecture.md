@@ -1,7 +1,5 @@
 # 5. Memory Architecture
 
-**Photo alignment:** the title, stages, arrows and feedback direction below follow supplied photo 5. Layout is adapted for readable Markdown; implementation safeguards are explained separately.
-
 ## Customer problem
 
 An agent should remember useful context across sessions, but the customer needs isolation, expiry and a way to forget.
@@ -10,7 +8,13 @@ An agent should remember useful context across sessions, but the customer needs 
 
 Short-term memory describes the current session. Long-term memory carries approved, time-limited summaries across sessions. The knowledge base is externally maintained reference information. These stores have different ownership and retention rules.
 
-## Diagram from the photo
+## Illustrated overview
+
+![5. Memory Architecture: illustrated flow and step-by-step explanation](../diagrams/05-memory-architecture.png)
+
+[Download editable SVG](../diagrams/05-memory-architecture.svg)
+
+## Technical flow
 
 ```mermaid
 flowchart TD
@@ -76,5 +80,5 @@ Deleting memory does not delete run history or backups. Run/effect retention and
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Photo-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
 

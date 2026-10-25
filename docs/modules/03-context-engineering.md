@@ -1,7 +1,5 @@
 # 3. Context Engineering
 
-**Photo alignment:** the title, stages, arrows and feedback direction below follow supplied photo 3. Layout is adapted for readable Markdown; implementation safeguards are explained separately.
-
 ## Customer problem
 
 A support agent answers from the wrong customer's runbook and includes outdated instructions. How do you select and organize evidence?
@@ -10,7 +8,13 @@ A support agent answers from the wrong customer's runbook and includes outdated 
 
 Context is the information presented to the planner right now. It is assembled from trusted rules, the user's goal, tool descriptions, tenant-scoped retrieval, memory and recent observations. More text is not automatically better.
 
-## Diagram from the photo
+## Illustrated overview
+
+![3. Context Engineering: illustrated flow and step-by-step explanation](../diagrams/03-context-engineering.png)
+
+[Download editable SVG](../diagrams/03-context-engineering.svg)
+
+## Technical flow
 
 ```mermaid
 flowchart LR
@@ -67,5 +71,5 @@ The retriever is intentionally lexical over a small corpus. Embeddings, rerankin
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Photo-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
 
