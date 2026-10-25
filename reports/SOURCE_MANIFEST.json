@@ -26,7 +26,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "88eb3f3839100342edc83fdb1546be451f90cf554856d83c5e2be1e419d56d60"
+      "sha256": "4ad77a113af1600a459457da1b1d09fe5dae5c1373c19f03ae652355a9e83b76"
     },
     {
       "path": "SECURITY.md",
@@ -70,11 +70,11 @@
     },
     {
       "path": "course/INSTRUCTOR_GUIDE.md",
-      "sha256": "ff6b232c963a9dc54a9d3bdbcfe7e1892145c53eb56f505f178c14e7950caa90"
+      "sha256": "dafa654e7442adfa39d4d8dbfafdf1df6af3a47df048784b2f8f8d71329adbe2"
     },
     {
       "path": "course/SYLLABUS.md",
-      "sha256": "dbfc49717247e1fce4bdba9fd445d08bc02893b7efd6e30c8fcc06824fc473f1"
+      "sha256": "5cecad70b9b8f90cd2b5fcdadf86545e3cb4aa55c34b58b793767aabb45ff85c"
     },
     {
       "path": "course/labs/WORKBOOK.md",
@@ -106,51 +106,135 @@
     },
     {
       "path": "docs/PHOTO_ALIGNMENT.md",
-      "sha256": "fa188f901b8b048db48846fb30068199461f7d773ebdb1c8d07e3c38f89fee44"
+      "sha256": "29884a44cd6aa52427e47721f69ec4636ddf1d072d453a80f2d5ee66b9b4ebb5"
     },
     {
       "path": "docs/PRODUCTION_READINESS.md",
-      "sha256": "2d07c62c39793392996dfcde06f1b3eed81c2b9a24afb2cc233723d2c47291d5"
+      "sha256": "594e571a3dd027c8c601f403dc4e34f93677594d38177a3561deafc5e65ecb6d"
+    },
+    {
+      "path": "docs/diagrams/01-harness-engineering.png",
+      "sha256": "7d88efcc7987282bd18a66b3b4c02c8673e03cc7deaed43fb3b426c13f147284"
+    },
+    {
+      "path": "docs/diagrams/01-harness-engineering.svg",
+      "sha256": "2154edea686a15f82a9c882d05d97ed38d1ba627d91198513dc61998522db2a5"
+    },
+    {
+      "path": "docs/diagrams/02-loop-engineering.png",
+      "sha256": "cb2ea15838169a5352efdb11eeedc619291c5929845a7030a688552d9769a350"
+    },
+    {
+      "path": "docs/diagrams/02-loop-engineering.svg",
+      "sha256": "fb363f2b9e98723beadfcf144c6cec88cd7854634824c97a1ce31c8ef908363e"
+    },
+    {
+      "path": "docs/diagrams/03-context-engineering.png",
+      "sha256": "9b68dd754335ae5302ea69a25f5943dd12b16717101af4c480e5ddd1b6f6af63"
+    },
+    {
+      "path": "docs/diagrams/03-context-engineering.svg",
+      "sha256": "03d1e4e28dddc08cdbe9f83de3bbc80b47ed47bfdc254d7deb10eb1f14810fa4"
+    },
+    {
+      "path": "docs/diagrams/04-tool-design.png",
+      "sha256": "128da4bb80f1c19b6ec50a0486243a8b65ca64f0176e267673a6a1e283a15bc2"
+    },
+    {
+      "path": "docs/diagrams/04-tool-design.svg",
+      "sha256": "53f34647f9e31336f9a0edf4b720d62026fb5378213bebce693e17c3a834d273"
+    },
+    {
+      "path": "docs/diagrams/05-memory-architecture.png",
+      "sha256": "260480e535c56bcd6ec9e1f090d41a8909699be3ee5ea9e9951a7b1d067a33b2"
+    },
+    {
+      "path": "docs/diagrams/05-memory-architecture.svg",
+      "sha256": "cf2cbf1be9e912952a9b618d191379afbe16802e9a8c5b09ca9ca0b9ca50c276"
+    },
+    {
+      "path": "docs/diagrams/06-orchestration-patterns.png",
+      "sha256": "b808e97377d98d22c4ec438835084932e702d866e3724f09746eda76f0d2c468"
+    },
+    {
+      "path": "docs/diagrams/06-orchestration-patterns.svg",
+      "sha256": "f5222310a012cccab1bb75f5ef681571d040de50e5d65cfb0adb96350387e6b8"
+    },
+    {
+      "path": "docs/diagrams/07-guardrails-and-permissions.png",
+      "sha256": "eaff222b612df7c55e01d770970597832d8e2dd9e413790b68e987e68b349839"
+    },
+    {
+      "path": "docs/diagrams/07-guardrails-and-permissions.svg",
+      "sha256": "c69dbea593a493397fc639d5c58bb4a2715b3bd82f3d1252942cc1c91a006b3d"
+    },
+    {
+      "path": "docs/diagrams/08-evals-for-agents.png",
+      "sha256": "f50ef03129d30453f77b9d44eb8e8ed03ed97c2a393c49f02d7faaaad7125125"
+    },
+    {
+      "path": "docs/diagrams/08-evals-for-agents.svg",
+      "sha256": "a94b86b5241596dc35bd37ca6377c5ce5a0286eb612fff57bc58441df85b76ac"
+    },
+    {
+      "path": "docs/diagrams/09-human-in-the-loop-design.png",
+      "sha256": "e6ae1bc342684c2ad59ebcbb692a119ee74abd59b0697080e4bef1cff703e2c1"
+    },
+    {
+      "path": "docs/diagrams/09-human-in-the-loop-design.svg",
+      "sha256": "24084693dbe8ca3282bdef30a17e8036e67836136a578cfaf3c7e8df5a37aa70"
+    },
+    {
+      "path": "docs/diagrams/10-observability-and-tracing.png",
+      "sha256": "6d5d6350d3012960f126d358ec686bbcfbbc3505fb94a96c7a81b62a0b977c86"
+    },
+    {
+      "path": "docs/diagrams/10-observability-and-tracing.svg",
+      "sha256": "86b2fb5f0b3c03ff2710f2b54a7c65d8dbb40337249b80dcd4746032d1fbf875"
+    },
+    {
+      "path": "docs/diagrams/README.md",
+      "sha256": "b0991ab4d2e91b26a824e995660723cc4378cdb2c293dd1090657ce6bc09eae4"
     },
     {
       "path": "docs/modules/01-harness-engineering.md",
-      "sha256": "56fcba334570666eb6025b096ff3d3fc1100f3cd0d108c5a52d7a25b6d9b4f45"
+      "sha256": "cc41957d2c9e30f7b048cfd771e1a4de1cde6a8acd3033e82d020f700e113702"
     },
     {
       "path": "docs/modules/02-loop-engineering.md",
-      "sha256": "f2e31118eb64c5fc0657d7f36f193e16d389a91cbade907835e7e6c2b7134199"
+      "sha256": "71b85b8dbcf58f0e094bd9cbfd8a91de117273b5a2d239dccd39dcc646bea06e"
     },
     {
       "path": "docs/modules/03-context-engineering.md",
-      "sha256": "10d688e829e2fd08df5e3eaa793943b7ccaf7229274d32d5796763160213420d"
+      "sha256": "e5e2c32744ae6bb3926fb75d0f5c315e4ef69d27d1dcf17cb5044e03d7f3d89d"
     },
     {
       "path": "docs/modules/04-tool-design.md",
-      "sha256": "4d1d92e7c7805b5601c56ccd3394d8c2192e9b14784f15f957c0f7a88a8454fe"
+      "sha256": "e8f3d7f271c966662c7089d989e0ad0b713520de535bb48b5d5fdfc6fcf95a3e"
     },
     {
       "path": "docs/modules/05-memory-architecture.md",
-      "sha256": "059e1a0f1637dcf3f1ce87d1eb32d5ee8d7115d0f97f27e25c6b0647c09f6d6b"
+      "sha256": "4303d65225cccad0a842065e55aff86da3d99dc296d2d85d2f775a321c3a9741"
     },
     {
       "path": "docs/modules/06-orchestration-patterns.md",
-      "sha256": "e450d75b2c2fd0ac28b6044154c444c1bee47df76c3125a91fc9aa23544b5c13"
+      "sha256": "b965541e73f0bfcae4c858f2f875a53a0a9fe686f331333f06095cfa4f821614"
     },
     {
       "path": "docs/modules/07-guardrails-and-permissions.md",
-      "sha256": "ae163a4ab73bbaa6e5b768eae49c9fe3c06e858442041c339f8c843b77f93cc8"
+      "sha256": "643f327abcda5446e44b28a3b9279bf6aa8ffbb6fc0f1dc2de12a3baceaf261d"
     },
     {
       "path": "docs/modules/08-evals-for-agents.md",
-      "sha256": "be0e0de5475fbda33d9c9ec0d601b0c12a0863bfcda6de53aa6e53a8bc873d87"
+      "sha256": "c8063bd737518700996b24667e194569e72b61a7022b4b5538ffa129c5e0fb13"
     },
     {
       "path": "docs/modules/09-human-in-the-loop-design.md",
-      "sha256": "bf7fbd8380d57522a90b0423dbb42a7ef4517fd075dace31d1ead34c2cec592b"
+      "sha256": "bdd2560f85a7965d12643091621bf6de3d473fb32bc1a3c1901b64c99a420471"
     },
     {
       "path": "docs/modules/10-observability-and-tracing.md",
-      "sha256": "544c4cca00a7080d8289b619a408a2f1f8b816c402f4922c4bb73c237d5a69c1"
+      "sha256": "2a3c996a32e7e7d0c9dae4f8b016dfe66d3df76e5414134c4b292d8109a36c94"
     },
     {
       "path": "examples/01-harness-engineering/main.py",
