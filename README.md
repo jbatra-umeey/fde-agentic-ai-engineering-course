@@ -29,7 +29,7 @@ On Windows, activate with `.venv\Scripts\Activate.ps1`. The offline examples nee
 
 Each topic has a visual walkthrough with icons, colored cards, directional arrows and a step-by-step explanation. Open the [full diagram gallery](docs/diagrams/README.md) for all ten illustrations and editable SVG downloads.
 
-![Harness Engineering illustrated overview](docs/diagrams/01-harness-engineering.png)
+![Harness Engineering illustrated overview](docs/diagrams/01-harness-engineering.png?v=footer-free-2)
 
 ## Learn the ten disciplines
 
