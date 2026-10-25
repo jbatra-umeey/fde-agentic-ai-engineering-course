@@ -27,9 +27,9 @@ On Windows, activate with `.venv\Scripts\Activate.ps1`. The offline examples nee
 
 ## Illustrated learning guide
 
-Each topic has a visual walkthrough with icons, colored cards, directional arrows and a step-by-step explanation. Open the [full diagram gallery](docs/diagrams/README.md) for all ten illustrations and editable SVG downloads.
+Each topic has a visual walkthrough with icons, colored cards, directional arrows and a step-by-step explanation. Open the [full diagram gallery](docs/illustrations/README.md) for all ten illustrations and editable SVG downloads.
 
-![Harness Engineering illustrated overview](docs/diagrams/01-harness-engineering.png?v=footer-free-2)
+![Harness Engineering illustrated overview](docs/illustrations/01-harness-engineering.png)
 
 ## Learn the ten disciplines
 
@@ -46,7 +46,7 @@ Each topic has a visual walkthrough with icons, colored cards, directional arrow
 | [9. Human-in-the-Loop Design](docs/modules/09-human-in-the-loop-design.md) | A durable independent-review workflow |
 | [10. Observability & Tracing](docs/modules/10-observability-and-tracing.md) | An explainable run history and support plan |
 
-Each module has the matching diagram, plain-language explanation, code entry point, runnable example, hands-on lab, failure exercise and acceptance criteria. See the [concept-to-code map](docs/PHOTO_ALIGNMENT.md) to audit coverage.
+Each module has the matching diagram, plain-language explanation, code entry point, runnable example, hands-on lab, failure exercise and acceptance criteria. See the [concept-to-code map](docs/CONCEPT_MAP.md) to audit coverage.
 
 ## Five customer-facing scenarios
 
@@ -114,6 +114,6 @@ python -m build
 
 GitHub Actions runs these checks and builds the container when the repository is published. A workflow file is not evidence that hosted CI has already run.
 
-## Provenance and reuse
+## Course maintainer
 
-The topic sequence and conceptual flows follow the supplied screenshots, visibly credited to @aiwithanuj. Explanations, code and implementation diagrams were authored for this course. Original screenshots are not redistributed. See [publication guidance](course/INSTRUCTOR_GUIDE.md) before a public or commercial release. No software/content license is assumed: the future publisher should choose and add one.
+[Jagprit Batra](https://github.com/jbatra-umeey). For teaching sessions and course releases, see the [instructor guide](course/INSTRUCTOR_GUIDE.md).

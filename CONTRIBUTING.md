@@ -1,6 +1,6 @@
 # Contributing and completing labs
 
-Keep the ten conceptual diagrams aligned with the supplied references. Put implementation-only additions in the architecture guide and update the traceability map when moving code.
+Keep the ten conceptual diagrams consistent with the course explanations and working examples. Put implementation-only additions in the architecture guide and update the traceability map when moving code.
 
 Before proposing a change: describe the customer problem, preserve fixture mode, add meaningful acceptance/failure evidence, run lint/tests/evals, and update limitations. Never add real customer data, generated local credentials, private tokens or database files.
 
