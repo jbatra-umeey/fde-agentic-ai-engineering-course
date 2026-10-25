@@ -10,9 +10,9 @@ The harness is the operating environment around the agent: instructions, identit
 
 ## Illustrated overview
 
-![1. Harness Engineering: illustrated flow and step-by-step explanation](../diagrams/01-harness-engineering.png?v=footer-free-2)
+![1. Harness Engineering: illustrated flow and step-by-step explanation](../illustrations/01-harness-engineering.png)
 
-[Download editable SVG](../diagrams/01-harness-engineering.svg?v=footer-free-2)
+[Download editable SVG](../illustrations/01-harness-engineering.svg)
 
 ## Technical flow
 
@@ -73,5 +73,5 @@ A regulated deployment needs its own retention, access-control and model approva
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../CONCEPT_MAP.md) · [Production readiness](../PRODUCTION_READINESS.md)
 

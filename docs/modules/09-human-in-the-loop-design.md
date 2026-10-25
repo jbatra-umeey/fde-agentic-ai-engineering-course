@@ -6,13 +6,13 @@ The agent should prepare a consequential action, but an accountable person must 
 
 ## Understand it simply
 
-The photo's flow is preserved: a human sets the goal, the agent produces an output, a human reviews it, and feedback informs the next step. For a write operation, the first output is a proposal. The actual effect follows approval so review can still prevent harm.
+A human sets the goal, the agent produces an output, a human reviews it, and feedback informs the next step. For a write operation, the first output is a proposal. The actual effect follows approval so review can still prevent harm.
 
 ## Illustrated overview
 
-![9. Human-in-the-Loop Design: illustrated flow and step-by-step explanation](../diagrams/09-human-in-the-loop-design.png?v=footer-free-2)
+![9. Human-in-the-Loop Design: illustrated flow and step-by-step explanation](../illustrations/09-human-in-the-loop-design.png)
 
-[Download editable SVG](../diagrams/09-human-in-the-loop-design.svg?v=footer-free-2)
+[Download editable SVG](../illustrations/09-human-in-the-loop-design.svg)
 
 ## Technical flow
 
@@ -69,5 +69,5 @@ Approval expires after one hour. There is no notification service or expiry sche
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../CONCEPT_MAP.md) · [Production readiness](../PRODUCTION_READINESS.md)
 

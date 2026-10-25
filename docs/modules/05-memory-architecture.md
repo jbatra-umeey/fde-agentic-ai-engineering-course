@@ -10,9 +10,9 @@ Short-term memory describes the current session. Long-term memory carries approv
 
 ## Illustrated overview
 
-![5. Memory Architecture: illustrated flow and step-by-step explanation](../diagrams/05-memory-architecture.png?v=footer-free-2)
+![5. Memory Architecture: illustrated flow and step-by-step explanation](../illustrations/05-memory-architecture.png)
 
-[Download editable SVG](../diagrams/05-memory-architecture.svg?v=footer-free-2)
+[Download editable SVG](../illustrations/05-memory-architecture.svg)
 
 ## Technical flow
 
@@ -80,5 +80,5 @@ Deleting memory does not delete run history or backups. Run/effect retention and
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../CONCEPT_MAP.md) · [Production readiness](../PRODUCTION_READINESS.md)
 

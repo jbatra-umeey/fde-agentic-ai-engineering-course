@@ -10,9 +10,9 @@ Evaluation turns customer expectations into repeatable checks. Outcome checks as
 
 ## Illustrated overview
 
-![8. Evals for Agents: illustrated flow and step-by-step explanation](../diagrams/08-evals-for-agents.png?v=footer-free-2)
+![8. Evals for Agents: illustrated flow and step-by-step explanation](../illustrations/08-evals-for-agents.png)
 
-[Download editable SVG](../diagrams/08-evals-for-agents.svg?v=footer-free-2)
+[Download editable SVG](../illustrations/08-evals-for-agents.svg)
 
 ## Technical flow
 
@@ -71,5 +71,5 @@ Five synthetic cases do not establish model quality. Before launch, add labeled 
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../CONCEPT_MAP.md) · [Production readiness](../PRODUCTION_READINESS.md)
 

@@ -10,9 +10,9 @@ Guardrails validate the request and output. Permissions determine who may access
 
 ## Illustrated overview
 
-![7. Guardrails & Permissions: illustrated flow and step-by-step explanation](../diagrams/07-guardrails-and-permissions.png?v=footer-free-2)
+![7. Guardrails & Permissions: illustrated flow and step-by-step explanation](../illustrations/07-guardrails-and-permissions.png)
 
-[Download editable SVG](../diagrams/07-guardrails-and-permissions.svg?v=footer-free-2)
+[Download editable SVG](../illustrations/07-guardrails-and-permissions.svg)
 
 ## Technical flow
 
@@ -70,5 +70,5 @@ Policy checks are not a full harmful-content classifier or DLP system. OIDC, fin
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../CONCEPT_MAP.md) · [Production readiness](../PRODUCTION_READINESS.md)
 

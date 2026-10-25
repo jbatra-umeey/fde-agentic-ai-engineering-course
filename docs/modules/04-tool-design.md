@@ -10,9 +10,9 @@ A tool is a narrow typed capability, not a general-purpose command channel. Its 
 
 ## Illustrated overview
 
-![4. Tool Design: illustrated flow and step-by-step explanation](../diagrams/04-tool-design.png?v=footer-free-2)
+![4. Tool Design: illustrated flow and step-by-step explanation](../illustrations/04-tool-design.png)
 
-[Download editable SVG](../diagrams/04-tool-design.svg?v=footer-free-2)
+[Download editable SVG](../illustrations/04-tool-design.svg)
 
 ## Technical flow
 
@@ -71,5 +71,5 @@ Local write effects are transactional. A remote connector needs downstream idemp
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../CONCEPT_MAP.md) · [Production readiness](../PRODUCTION_READINESS.md)
 

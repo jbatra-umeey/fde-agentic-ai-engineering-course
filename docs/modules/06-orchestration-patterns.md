@@ -10,9 +10,9 @@ The orchestrator owns assignment, coordination and aggregation. In the reference
 
 ## Illustrated overview
 
-![6. Orchestration Patterns: illustrated flow and step-by-step explanation](../diagrams/06-orchestration-patterns.png?v=footer-free-2)
+![6. Orchestration Patterns: illustrated flow and step-by-step explanation](../illustrations/06-orchestration-patterns.png)
 
-[Download editable SVG](../diagrams/06-orchestration-patterns.svg?v=footer-free-2)
+[Download editable SVG](../illustrations/06-orchestration-patterns.svg)
 
 ## Technical flow
 
@@ -57,7 +57,7 @@ Failure drill: Make one specialist raise an exception. Verify the group fails ra
 
 Submit: A task allocation diagram and a table explaining when sequential, parallel and supervisor routing are appropriate.
 
-Acceptance criteria: Independent workers overlap; failure cancels peers; all four photo roles are present; the final decision accounts for the analysis.
+Acceptance criteria: Independent workers overlap; failure cancels peers; all four specialist roles are present; the final decision accounts for the analysis.
 
 ## FDE decision checkpoint
 
@@ -75,5 +75,5 @@ These specialist agents are deterministic reference workers. The coding worker e
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../CONCEPT_MAP.md) · [Production readiness](../PRODUCTION_READINESS.md)
 

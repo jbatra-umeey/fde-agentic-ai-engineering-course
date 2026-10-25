@@ -10,9 +10,9 @@ Context is the information presented to the planner right now. It is assembled f
 
 ## Illustrated overview
 
-![3. Context Engineering: illustrated flow and step-by-step explanation](../diagrams/03-context-engineering.png?v=footer-free-2)
+![3. Context Engineering: illustrated flow and step-by-step explanation](../illustrations/03-context-engineering.png)
 
-[Download editable SVG](../diagrams/03-context-engineering.svg?v=footer-free-2)
+[Download editable SVG](../illustrations/03-context-engineering.svg)
 
 ## Technical flow
 
@@ -71,5 +71,5 @@ The retriever is intentionally lexical over a small corpus. Embeddings, rerankin
 2. Identify the authoritative decision boundary and demonstrate its failure test.
 3. Name one assumption that would change for your customer and how you would validate it.
 
-[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../PHOTO_ALIGNMENT.md) · [Production readiness](../PRODUCTION_READINESS.md)
+[Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../CONCEPT_MAP.md) · [Production readiness](../PRODUCTION_READINESS.md)
 
