@@ -1,0 +1,176 @@
+* Getting build dependencies for sdist...
+running egg_info
+writing jev_agent_engineering.egg-info/PKG-INFO
+writing dependency_links to jev_agent_engineering.egg-info/dependency_links.txt
+writing entry points to jev_agent_engineering.egg-info/entry_points.txt
+writing requirements to jev_agent_engineering.egg-info/requires.txt
+writing top-level names to jev_agent_engineering.egg-info/top_level.txt
+reading manifest file 'jev_agent_engineering.egg-info/SOURCES.txt'
+writing manifest file 'jev_agent_engineering.egg-info/SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing jev_agent_engineering.egg-info/PKG-INFO
+writing dependency_links to jev_agent_engineering.egg-info/dependency_links.txt
+writing entry points to jev_agent_engineering.egg-info/entry_points.txt
+writing requirements to jev_agent_engineering.egg-info/requires.txt
+writing top-level names to jev_agent_engineering.egg-info/top_level.txt
+reading manifest file 'jev_agent_engineering.egg-info/SOURCES.txt'
+writing manifest file 'jev_agent_engineering.egg-info/SOURCES.txt'
+running check
+creating jev_agent_engineering-0.1.0
+creating jev_agent_engineering-0.1.0/apps/api/src/jev_api
+creating jev_agent_engineering-0.1.0/apps/cli/src/jev_cli
+creating jev_agent_engineering-0.1.0/jev_agent_engineering.egg-info
+creating jev_agent_engineering-0.1.0/packages/core/src/jev_core
+creating jev_agent_engineering-0.1.0/packages/evals/src/jev_evals
+creating jev_agent_engineering-0.1.0/packages/tools/src/jev_tools
+creating jev_agent_engineering-0.1.0/packages/workflows/src/jev_workflows
+creating jev_agent_engineering-0.1.0/tests
+copying files to jev_agent_engineering-0.1.0...
+copying README.md -> jev_agent_engineering-0.1.0
+copying pyproject.toml -> jev_agent_engineering-0.1.0
+copying apps/api/src/jev_api/__init__.py -> jev_agent_engineering-0.1.0/apps/api/src/jev_api
+copying apps/api/src/jev_api/app.py -> jev_agent_engineering-0.1.0/apps/api/src/jev_api
+copying apps/api/src/jev_api/security.py -> jev_agent_engineering-0.1.0/apps/api/src/jev_api
+copying apps/cli/src/jev_cli/__init__.py -> jev_agent_engineering-0.1.0/apps/cli/src/jev_cli
+copying apps/cli/src/jev_cli/lessons.py -> jev_agent_engineering-0.1.0/apps/cli/src/jev_cli
+copying apps/cli/src/jev_cli/main.py -> jev_agent_engineering-0.1.0/apps/cli/src/jev_cli
+copying jev_agent_engineering.egg-info/PKG-INFO -> jev_agent_engineering-0.1.0/jev_agent_engineering.egg-info
+copying jev_agent_engineering.egg-info/SOURCES.txt -> jev_agent_engineering-0.1.0/jev_agent_engineering.egg-info
+copying jev_agent_engineering.egg-info/dependency_links.txt -> jev_agent_engineering-0.1.0/jev_agent_engineering.egg-info
+copying jev_agent_engineering.egg-info/entry_points.txt -> jev_agent_engineering-0.1.0/jev_agent_engineering.egg-info
+copying jev_agent_engineering.egg-info/requires.txt -> jev_agent_engineering-0.1.0/jev_agent_engineering.egg-info
+copying jev_agent_engineering.egg-info/top_level.txt -> jev_agent_engineering-0.1.0/jev_agent_engineering.egg-info
+copying packages/core/src/jev_core/__init__.py -> jev_agent_engineering-0.1.0/packages/core/src/jev_core
+copying packages/core/src/jev_core/context.py -> jev_agent_engineering-0.1.0/packages/core/src/jev_core
+copying packages/core/src/jev_core/models.py -> jev_agent_engineering-0.1.0/packages/core/src/jev_core
+copying packages/core/src/jev_core/providers.py -> jev_agent_engineering-0.1.0/packages/core/src/jev_core
+copying packages/core/src/jev_core/runtime.py -> jev_agent_engineering-0.1.0/packages/core/src/jev_core
+copying packages/core/src/jev_core/store.py -> jev_agent_engineering-0.1.0/packages/core/src/jev_core
+copying packages/core/src/jev_core/telemetry.py -> jev_agent_engineering-0.1.0/packages/core/src/jev_core
+copying packages/evals/src/jev_evals/__init__.py -> jev_agent_engineering-0.1.0/packages/evals/src/jev_evals
+copying packages/evals/src/jev_evals/runner.py -> jev_agent_engineering-0.1.0/packages/evals/src/jev_evals
+copying packages/tools/src/jev_tools/__init__.py -> jev_agent_engineering-0.1.0/packages/tools/src/jev_tools
+copying packages/tools/src/jev_tools/registry.py -> jev_agent_engineering-0.1.0/packages/tools/src/jev_tools
+copying packages/workflows/src/jev_workflows/__init__.py -> jev_agent_engineering-0.1.0/packages/workflows/src/jev_workflows
+copying packages/workflows/src/jev_workflows/patterns.py -> jev_agent_engineering-0.1.0/packages/workflows/src/jev_workflows
+copying packages/workflows/src/jev_workflows/scenarios.py -> jev_agent_engineering-0.1.0/packages/workflows/src/jev_workflows
+copying tests/test_api_provider.py -> jev_agent_engineering-0.1.0/tests
+copying tests/test_context_tools.py -> jev_agent_engineering-0.1.0/tests
+copying tests/test_lessons.py -> jev_agent_engineering-0.1.0/tests
+copying tests/test_runtime.py -> jev_agent_engineering-0.1.0/tests
+copying jev_agent_engineering.egg-info/SOURCES.txt -> jev_agent_engineering-0.1.0/jev_agent_engineering.egg-info
+Writing jev_agent_engineering-0.1.0/setup.cfg
+Creating tar archive
+removing 'jev_agent_engineering-0.1.0' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing jev_agent_engineering.egg-info/PKG-INFO
+writing dependency_links to jev_agent_engineering.egg-info/dependency_links.txt
+writing entry points to jev_agent_engineering.egg-info/entry_points.txt
+writing requirements to jev_agent_engineering.egg-info/requires.txt
+writing top-level names to jev_agent_engineering.egg-info/top_level.txt
+reading manifest file 'jev_agent_engineering.egg-info/SOURCES.txt'
+writing manifest file 'jev_agent_engineering.egg-info/SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build/lib/jev_core
+copying packages/core/src/jev_core/models.py -> build/lib/jev_core
+copying packages/core/src/jev_core/telemetry.py -> build/lib/jev_core
+copying packages/core/src/jev_core/store.py -> build/lib/jev_core
+copying packages/core/src/jev_core/providers.py -> build/lib/jev_core
+copying packages/core/src/jev_core/__init__.py -> build/lib/jev_core
+copying packages/core/src/jev_core/context.py -> build/lib/jev_core
+copying packages/core/src/jev_core/runtime.py -> build/lib/jev_core
+creating build/lib/jev_tools
+copying packages/tools/src/jev_tools/__init__.py -> build/lib/jev_tools
+copying packages/tools/src/jev_tools/registry.py -> build/lib/jev_tools
+creating build/lib/jev_workflows
+copying packages/workflows/src/jev_workflows/patterns.py -> build/lib/jev_workflows
+copying packages/workflows/src/jev_workflows/scenarios.py -> build/lib/jev_workflows
+copying packages/workflows/src/jev_workflows/__init__.py -> build/lib/jev_workflows
+creating build/lib/jev_evals
+copying packages/evals/src/jev_evals/runner.py -> build/lib/jev_evals
+copying packages/evals/src/jev_evals/__init__.py -> build/lib/jev_evals
+creating build/lib/jev_api
+copying apps/api/src/jev_api/security.py -> build/lib/jev_api
+copying apps/api/src/jev_api/__init__.py -> build/lib/jev_api
+copying apps/api/src/jev_api/app.py -> build/lib/jev_api
+creating build/lib/jev_cli
+copying apps/cli/src/jev_cli/main.py -> build/lib/jev_cli
+copying apps/cli/src/jev_cli/__init__.py -> build/lib/jev_cli
+copying apps/cli/src/jev_cli/lessons.py -> build/lib/jev_cli
+running egg_info
+writing jev_agent_engineering.egg-info/PKG-INFO
+writing dependency_links to jev_agent_engineering.egg-info/dependency_links.txt
+writing entry points to jev_agent_engineering.egg-info/entry_points.txt
+writing requirements to jev_agent_engineering.egg-info/requires.txt
+writing top-level names to jev_agent_engineering.egg-info/top_level.txt
+reading manifest file 'jev_agent_engineering.egg-info/SOURCES.txt'
+writing manifest file 'jev_agent_engineering.egg-info/SOURCES.txt'
+installing to build/bdist.linux-x86_64/wheel
+running install
+running install_lib
+creating build/bdist.linux-x86_64/wheel
+creating build/bdist.linux-x86_64/wheel/jev_workflows
+copying build/lib/jev_workflows/patterns.py -> build/bdist.linux-x86_64/wheel/./jev_workflows
+copying build/lib/jev_workflows/scenarios.py -> build/bdist.linux-x86_64/wheel/./jev_workflows
+copying build/lib/jev_workflows/__init__.py -> build/bdist.linux-x86_64/wheel/./jev_workflows
+creating build/bdist.linux-x86_64/wheel/jev_core
+copying build/lib/jev_core/models.py -> build/bdist.linux-x86_64/wheel/./jev_core
+copying build/lib/jev_core/telemetry.py -> build/bdist.linux-x86_64/wheel/./jev_core
+copying build/lib/jev_core/store.py -> build/bdist.linux-x86_64/wheel/./jev_core
+copying build/lib/jev_core/providers.py -> build/bdist.linux-x86_64/wheel/./jev_core
+copying build/lib/jev_core/__init__.py -> build/bdist.linux-x86_64/wheel/./jev_core
+copying build/lib/jev_core/context.py -> build/bdist.linux-x86_64/wheel/./jev_core
+copying build/lib/jev_core/runtime.py -> build/bdist.linux-x86_64/wheel/./jev_core
+creating build/bdist.linux-x86_64/wheel/jev_tools
+copying build/lib/jev_tools/__init__.py -> build/bdist.linux-x86_64/wheel/./jev_tools
+copying build/lib/jev_tools/registry.py -> build/bdist.linux-x86_64/wheel/./jev_tools
+creating build/bdist.linux-x86_64/wheel/jev_cli
+copying build/lib/jev_cli/main.py -> build/bdist.linux-x86_64/wheel/./jev_cli
+copying build/lib/jev_cli/__init__.py -> build/bdist.linux-x86_64/wheel/./jev_cli
+copying build/lib/jev_cli/lessons.py -> build/bdist.linux-x86_64/wheel/./jev_cli
+creating build/bdist.linux-x86_64/wheel/jev_evals
+copying build/lib/jev_evals/runner.py -> build/bdist.linux-x86_64/wheel/./jev_evals
+copying build/lib/jev_evals/__init__.py -> build/bdist.linux-x86_64/wheel/./jev_evals
+creating build/bdist.linux-x86_64/wheel/jev_api
+copying build/lib/jev_api/security.py -> build/bdist.linux-x86_64/wheel/./jev_api
+copying build/lib/jev_api/__init__.py -> build/bdist.linux-x86_64/wheel/./jev_api
+copying build/lib/jev_api/app.py -> build/bdist.linux-x86_64/wheel/./jev_api
+running install_egg_info
+Copying jev_agent_engineering.egg-info to build/bdist.linux-x86_64/wheel/./jev_agent_engineering-0.1.0-py3.12.egg-info
+running install_scripts
+creating build/bdist.linux-x86_64/wheel/jev_agent_engineering-0.1.0.dist-info/WHEEL
+creating '/workspace/scratch/8bbf368e8254/jev-agent-engineering/dist/.tmp-i9h_r9mk/jev_agent_engineering-0.1.0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+adding 'jev_api/__init__.py'
+adding 'jev_api/app.py'
+adding 'jev_api/security.py'
+adding 'jev_cli/__init__.py'
+adding 'jev_cli/lessons.py'
+adding 'jev_cli/main.py'
+adding 'jev_core/__init__.py'
+adding 'jev_core/context.py'
+adding 'jev_core/models.py'
+adding 'jev_core/providers.py'
+adding 'jev_core/runtime.py'
+adding 'jev_core/store.py'
+adding 'jev_core/telemetry.py'
+adding 'jev_evals/__init__.py'
+adding 'jev_evals/runner.py'
+adding 'jev_tools/__init__.py'
+adding 'jev_tools/registry.py'
+adding 'jev_workflows/__init__.py'
+adding 'jev_workflows/patterns.py'
+adding 'jev_workflows/scenarios.py'
+adding 'jev_agent_engineering-0.1.0.dist-info/METADATA'
+adding 'jev_agent_engineering-0.1.0.dist-info/WHEEL'
+adding 'jev_agent_engineering-0.1.0.dist-info/entry_points.txt'
+adding 'jev_agent_engineering-0.1.0.dist-info/top_level.txt'
+adding 'jev_agent_engineering-0.1.0.dist-info/RECORD'
+removing build/bdist.linux-x86_64/wheel
+Successfully built jev_agent_engineering-0.1.0.tar.gz and jev_agent_engineering-0.1.0-py3-none-any.whl

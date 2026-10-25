@@ -1,0 +1,332 @@
+{
+  "files": [
+    {
+      "path": ".dockerignore",
+      "sha256": "4962a01d376a150b6ec8e9c9f962f64ce7ad631f34d2156600bd584e3d6cf209"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "d07b61506261426c0a66bd3cc50574838e5e17a1f43c598039e6bd4076e29e85"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "48cd1bd846e3de1539512eb9d964c54743e422bd1beb720e5dfac898648ab2d4"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "ea4796b6b428ebfb31b11b8abf936dc2210659676a68f2ba1c9c818aa6dc3968"
+    },
+    {
+      "path": "Dockerfile",
+      "sha256": "80eece8c09a1803d259a23b82d9851564167fd773ed01455708f38b1042e7062"
+    },
+    {
+      "path": "Makefile",
+      "sha256": "6ff481db7a0b59d95be3be5568f0e99967414eeb9dd22fb822177b09a552b53b"
+    },
+    {
+      "path": "README.md",
+      "sha256": "88eb3f3839100342edc83fdb1546be451f90cf554856d83c5e2be1e419d56d60"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "2f10b04a156efdbd40f8899cd7ff727b4a0a436bf3adf9962d957efec210d80e"
+    },
+    {
+      "path": "apps/api/src/jev_api/__init__.py",
+      "sha256": "04ceefa4cab1f614196e9d09fbacdc7117c05d509f5d69a2a0a6f7092a606eec"
+    },
+    {
+      "path": "apps/api/src/jev_api/app.py",
+      "sha256": "943c69f7cdcb852e54a9b0d8ed9293cc0d541c6aef3d74b18ce588854e14ac43"
+    },
+    {
+      "path": "apps/api/src/jev_api/security.py",
+      "sha256": "0b280d05b2eb69d2dbf0a5206042d0fb4d2be49922b3dc47206e31c6fee49852"
+    },
+    {
+      "path": "apps/cli/src/jev_cli/__init__.py",
+      "sha256": "1ad83baa4931fae797a9750fef4e9510a6601bc3723c66c67f4673fb5885de1f"
+    },
+    {
+      "path": "apps/cli/src/jev_cli/lessons.py",
+      "sha256": "4c96a497c9d36b951ff2d9fc4c7ac68b35da3ed653f92513b2e11dd8217cc3d3"
+    },
+    {
+      "path": "apps/cli/src/jev_cli/main.py",
+      "sha256": "0223af520d69736983bdd314ac7172ab89e63c34763d7155e6f4c412adf5d52a"
+    },
+    {
+      "path": "compose.yaml",
+      "sha256": "58e8f4d05556dd90448f57247f30b8775562b320ce79ef695076caa4ab5403dd"
+    },
+    {
+      "path": "course/CAPSTONE.md",
+      "sha256": "f3e2e48b81ac315c2b5af1eb3caad2aea0bda00a8bb4f2594afd7f40a56ac156"
+    },
+    {
+      "path": "course/FDE_FIELD_GUIDE.md",
+      "sha256": "024a0c0057a1e25426335f3e033a52ab3769e48ae99932a934fbf5ec820a06bf"
+    },
+    {
+      "path": "course/INSTRUCTOR_GUIDE.md",
+      "sha256": "ff6b232c963a9dc54a9d3bdbcfe7e1892145c53eb56f505f178c14e7950caa90"
+    },
+    {
+      "path": "course/SYLLABUS.md",
+      "sha256": "dbfc49717247e1fce4bdba9fd445d08bc02893b7efd6e30c8fcc06824fc473f1"
+    },
+    {
+      "path": "course/labs/WORKBOOK.md",
+      "sha256": "fb642d22c327692adcdf40e75e0b0daf5e0b464fe8132021f1348cb5c639774c"
+    },
+    {
+      "path": "course/templates/DISCOVERY.md",
+      "sha256": "44b5c3d94e40cfc74a7f2492e987bc3569b3beb0d92ad20d21d13f2c5a8e743e"
+    },
+    {
+      "path": "course/templates/HANDOVER.md",
+      "sha256": "dae2ac879720e611ed8672c069b652e82c5c6f50cd4671a03a0b1105b0fea228"
+    },
+    {
+      "path": "docs/API.md",
+      "sha256": "d8ee0539006c9a85f562f8f6604c9597fef40b80b86bcb26991623a4b94b779f"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "b5adc5e710df02fa1f16b947239e30086390b8b405435f106faf39b252962fc9"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "sha256": "b1730f1aa08291b13f7d9cf5d711cad5e48e9d20e2ea31166e711d886356d0a4"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha256": "59f7eca5a6ceae2f23e1c964c5b49e94579d08cc3b11e02e2bb4001f6042079a"
+    },
+    {
+      "path": "docs/PHOTO_ALIGNMENT.md",
+      "sha256": "fa188f901b8b048db48846fb30068199461f7d773ebdb1c8d07e3c38f89fee44"
+    },
+    {
+      "path": "docs/PRODUCTION_READINESS.md",
+      "sha256": "2d07c62c39793392996dfcde06f1b3eed81c2b9a24afb2cc233723d2c47291d5"
+    },
+    {
+      "path": "docs/modules/01-harness-engineering.md",
+      "sha256": "56fcba334570666eb6025b096ff3d3fc1100f3cd0d108c5a52d7a25b6d9b4f45"
+    },
+    {
+      "path": "docs/modules/02-loop-engineering.md",
+      "sha256": "f2e31118eb64c5fc0657d7f36f193e16d389a91cbade907835e7e6c2b7134199"
+    },
+    {
+      "path": "docs/modules/03-context-engineering.md",
+      "sha256": "10d688e829e2fd08df5e3eaa793943b7ccaf7229274d32d5796763160213420d"
+    },
+    {
+      "path": "docs/modules/04-tool-design.md",
+      "sha256": "4d1d92e7c7805b5601c56ccd3394d8c2192e9b14784f15f957c0f7a88a8454fe"
+    },
+    {
+      "path": "docs/modules/05-memory-architecture.md",
+      "sha256": "059e1a0f1637dcf3f1ce87d1eb32d5ee8d7115d0f97f27e25c6b0647c09f6d6b"
+    },
+    {
+      "path": "docs/modules/06-orchestration-patterns.md",
+      "sha256": "e450d75b2c2fd0ac28b6044154c444c1bee47df76c3125a91fc9aa23544b5c13"
+    },
+    {
+      "path": "docs/modules/07-guardrails-and-permissions.md",
+      "sha256": "ae163a4ab73bbaa6e5b768eae49c9fe3c06e858442041c339f8c843b77f93cc8"
+    },
+    {
+      "path": "docs/modules/08-evals-for-agents.md",
+      "sha256": "be0e0de5475fbda33d9c9ec0d601b0c12a0863bfcda6de53aa6e53a8bc873d87"
+    },
+    {
+      "path": "docs/modules/09-human-in-the-loop-design.md",
+      "sha256": "bf7fbd8380d57522a90b0423dbb42a7ef4517fd075dace31d1ead34c2cec592b"
+    },
+    {
+      "path": "docs/modules/10-observability-and-tracing.md",
+      "sha256": "544c4cca00a7080d8289b619a408a2f1f8b816c402f4922c4bb73c237d5a69c1"
+    },
+    {
+      "path": "examples/01-harness-engineering/main.py",
+      "sha256": "2216805d516da38d1c564d43ae80ddd0200b412d4053ab0a916dffecd5c68cd6"
+    },
+    {
+      "path": "examples/02-loop-engineering/main.py",
+      "sha256": "c046b65f766678271380b3b84c7d0b0c8102ea0182dc37a726b9c56b1ab82301"
+    },
+    {
+      "path": "examples/03-context-engineering/main.py",
+      "sha256": "34236dad8735dab2281c2b1ffb8b4ef591a5c70d1f4c1dfe39c10a0c661eb516"
+    },
+    {
+      "path": "examples/04-tool-design/main.py",
+      "sha256": "c633edd9034179be44234ec8bde45053b333bb220be623ca50b6930d176f2680"
+    },
+    {
+      "path": "examples/05-memory-architecture/main.py",
+      "sha256": "1a0261382d4cfd3965cc5792c8e6ec1424832353a7ad6a2758f3985465a060f2"
+    },
+    {
+      "path": "examples/06-orchestration-patterns/main.py",
+      "sha256": "d24829037f100d13edbf5c617c93085de1f43640f809883c9b3308beea89a30c"
+    },
+    {
+      "path": "examples/07-guardrails-and-permissions/main.py",
+      "sha256": "a6b92c676685501569336ce0d3b81423a7ffeb8e8cf7d7aa2590e5b62ede584e"
+    },
+    {
+      "path": "examples/08-evals-for-agents/main.py",
+      "sha256": "5ea40247b141c1a00b784d70f9d0f67b079be15fe6004a65f4ee88973cc47ef4"
+    },
+    {
+      "path": "examples/09-human-in-the-loop-design/main.py",
+      "sha256": "d3160f5542d3134d26f7b2f951c1204ab9b6880324f67e82ace86408d1dc6431"
+    },
+    {
+      "path": "examples/10-observability-and-tracing/main.py",
+      "sha256": "43e769d48d64efc40538a0014ffd560ede5e8f11d1fe663f913fcd13ff92358a"
+    },
+    {
+      "path": "packages/core/src/jev_core/__init__.py",
+      "sha256": "e7d3c45bad34385145a104b19ce0198c634eaba3a5c7ae4250c0de2b1ba7448e"
+    },
+    {
+      "path": "packages/core/src/jev_core/context.py",
+      "sha256": "97ff88af0d67c3d63386526648db408c8bc11864b42438362d3c36899fe3d3c7"
+    },
+    {
+      "path": "packages/core/src/jev_core/models.py",
+      "sha256": "6012389f0dcd58a756a19a4ea1e44072b0462e96d92766b9a153b4d740d3927c"
+    },
+    {
+      "path": "packages/core/src/jev_core/providers.py",
+      "sha256": "2e49ed6c1e46e52166c5e2b2aae2a474d0fe162a88df7988a7aa034ba9fcdfd0"
+    },
+    {
+      "path": "packages/core/src/jev_core/runtime.py",
+      "sha256": "97649ef32618204d8b91e0eaf10da48c8b6e535b86fb1597ebb330cf75b298f8"
+    },
+    {
+      "path": "packages/core/src/jev_core/store.py",
+      "sha256": "74aceef7433f451dccc375942ad442ae0673fb7048aa021a520e5a6cf37ad223"
+    },
+    {
+      "path": "packages/core/src/jev_core/telemetry.py",
+      "sha256": "4047782aab7972a6f35a09411508fcb4b4c43f53d7d10036b18602c53e8c06d2"
+    },
+    {
+      "path": "packages/evals/src/jev_evals/__init__.py",
+      "sha256": "7ef3a4a3f88aae2f00cb5d28770e9fb0bc5127260ad1c3e4a019d3f5dc94bb72"
+    },
+    {
+      "path": "packages/evals/src/jev_evals/runner.py",
+      "sha256": "6e4dc3369d7a983d714e3388a9f1ba3842be0a156a29eea4dfd34f74c9edff9e"
+    },
+    {
+      "path": "packages/tools/src/jev_tools/__init__.py",
+      "sha256": "d7640ebe4d44c9de09a264e69a41ca79f4c35ec2ff1849b4072a58d7784de2b4"
+    },
+    {
+      "path": "packages/tools/src/jev_tools/registry.py",
+      "sha256": "25a3ab9971aac961c21064ed08e9dd3a32db578276c4f27fea9b13eb0f09f25a"
+    },
+    {
+      "path": "packages/workflows/src/jev_workflows/__init__.py",
+      "sha256": "eb9a66ab1075275cda78f40e023cc2eb190918dc9851fa4bcf099153651a2112"
+    },
+    {
+      "path": "packages/workflows/src/jev_workflows/patterns.py",
+      "sha256": "7d71cf664de81030f763012b395fd233139f62980ed3403d38b271e865c9349c"
+    },
+    {
+      "path": "packages/workflows/src/jev_workflows/scenarios.py",
+      "sha256": "a03f41d87f9576e6dcbde1767ea5f32f39a9decd92049c5bbb0a063c5d9a0aa3"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "c1b9272863016715ab271cf2fc4953f917178fa84ae4312016da2f1725d0fc26"
+    },
+    {
+      "path": "reports/VALIDATION.md",
+      "sha256": "64f38171beec522e7869363e17386942f10a385859915ec5f5e15e0a246c7f8c"
+    },
+    {
+      "path": "reports/build.txt",
+      "sha256": "36ff8164b215ec87f98eb5771bac638923d1ab26c50b86c461c8f325dcb5100d"
+    },
+    {
+      "path": "reports/coverage.json",
+      "sha256": "1d788566577c333bcc48c2febf074c96eb3bf137ce415600e0079139505b81de"
+    },
+    {
+      "path": "reports/diagrams.json",
+      "sha256": "9227173ff84021a5f46b73c71f9c74306cd022000d3267159f0725f96ee0a952"
+    },
+    {
+      "path": "reports/evaluation.json",
+      "sha256": "1de02ce59c5a7f5a827ce79df75fde748d1d5c0881b5160febdab6ea1cb55e38"
+    },
+    {
+      "path": "reports/package-smoke.json",
+      "sha256": "6dc5b0eab1a8b66057dd29280bcac7ca71a6764430fa8c8306878e6f25557cf1"
+    },
+    {
+      "path": "reports/tests.txt",
+      "sha256": "bbb0f6f0bb894273754791a8da073f1476e4e0f12f1f8cc3dead070930592bab"
+    },
+    {
+      "path": "reports/tests.xml",
+      "sha256": "1829e358f405b5cbe483519f36a4648357787772209d38cbd6b2a6c02e84f23f"
+    },
+    {
+      "path": "requirements-dev.lock",
+      "sha256": "8a957be312f53a5d336eebd2683c45558f6f5c9c24601627968bdda2c2f37acf"
+    },
+    {
+      "path": "requirements.lock",
+      "sha256": "06f48ecd2086cf1269807e246ed50384bdc78737ef1ef9ce46f3fadb6f34a3b5"
+    },
+    {
+      "path": "scripts/check_repository.py",
+      "sha256": "517ecfa9872435f88712be748d2c10784d5f9559a62c271fe93c66dfc1ec31bd"
+    },
+    {
+      "path": "scripts/dev_credentials.py",
+      "sha256": "82fa7cc626c63fafb302847061731198c9ec36c9ba8178ea33a343b7476077ea"
+    },
+    {
+      "path": "scripts/maintenance.py",
+      "sha256": "f14306da47d582da1f665026262a5b41a8fa1ef990976e4fb259da94d813cc5d"
+    },
+    {
+      "path": "scripts/seed.py",
+      "sha256": "fb6bbf18b40e491cc8b86eb2c7c8d452bb812062837ea6f901849caa5ebef2cf"
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "0c86ec2c2a0991bf1eb3d76c2dc2cd66871f376e2621b8b887b47aee2a84d846"
+    },
+    {
+      "path": "tests/test_api_provider.py",
+      "sha256": "2f9bc41cfc7d2415da24effbb42cacd27e9fbef009bac61f593f0bddc0d500d3"
+    },
+    {
+      "path": "tests/test_context_tools.py",
+      "sha256": "1bb07add46cca6e352898d25083699f731dc8541b0c738bb5b69dae8f2e68316"
+    },
+    {
+      "path": "tests/test_lessons.py",
+      "sha256": "f744a9ab8e3a4b1f169cf1eda7f555e19a8c0c67a8584c7a95a96c81cba9c571"
+    },
+    {
+      "path": "tests/test_runtime.py",
+      "sha256": "746c2e854245bc260cbc699696ca3a22c4354afff3f3e740812cb98adb0f594a"
+    }
+  ]
+}

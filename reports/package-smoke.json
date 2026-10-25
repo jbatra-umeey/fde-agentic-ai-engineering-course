@@ -1,0 +1,9 @@
+{
+  "wheel_import": true,
+  "five_scenarios": "passed",
+  "real_local_http_api": "passed",
+  "independent_review": "passed",
+  "anonymous_denial": "passed",
+  "sqlite_backup_integrity": "passed",
+  "external_services_used": false
+}

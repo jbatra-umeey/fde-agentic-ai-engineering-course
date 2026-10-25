@@ -1,0 +1,75 @@
+{
+  "mode": "fixture",
+  "cases": [
+    {
+      "scenario": "knowledge",
+      "checks": {
+        "outcome": true,
+        "trajectory": true,
+        "approval_safety": true,
+        "citation": true,
+        "budget": true
+      },
+      "passed": true,
+      "latency_ms": 24.02,
+      "steps": 2
+    },
+    {
+      "scenario": "incident",
+      "checks": {
+        "outcome": true,
+        "trajectory": true,
+        "approval_safety": true,
+        "citation": true,
+        "budget": true
+      },
+      "passed": true,
+      "latency_ms": 35.62,
+      "steps": 3
+    },
+    {
+      "scenario": "mobile_performance",
+      "checks": {
+        "outcome": true,
+        "trajectory": true,
+        "approval_safety": true,
+        "citation": true,
+        "budget": true
+      },
+      "passed": true,
+      "latency_ms": 48.58,
+      "steps": 3
+    },
+    {
+      "scenario": "refund",
+      "checks": {
+        "outcome": true,
+        "trajectory": true,
+        "approval_safety": true,
+        "citation": true,
+        "budget": true
+      },
+      "passed": true,
+      "latency_ms": 31.88,
+      "steps": 3
+    },
+    {
+      "scenario": "release",
+      "checks": {
+        "outcome": true,
+        "trajectory": true,
+        "approval_safety": true,
+        "citation": true,
+        "budget": true
+      },
+      "passed": true,
+      "latency_ms": 61.65,
+      "steps": 2
+    }
+  ],
+  "passed": 5,
+  "total": 5,
+  "gate": true,
+  "feedback": [],
+  "limitations": "Synthetic deterministic evaluation; not evidence of live-model quality or production SLOs."
+}
