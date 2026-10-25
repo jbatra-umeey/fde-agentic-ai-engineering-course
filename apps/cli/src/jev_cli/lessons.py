@@ -1,4 +1,4 @@
-"""Ten photo-aligned walkthroughs; temporary stores make each independently repeatable."""
+"""Ten agent engineering walkthroughs; temporary stores make each independently repeatable."""
 
 import tempfile
 from pathlib import Path
