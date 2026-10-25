@@ -12,7 +12,7 @@ Choose one track. The stakeholder details below are fictional teaching briefs, n
 
 1. Interview a peer acting as sponsor and complete the discovery template. Record unknowns explicitly.
 2. Define a measurable acceptance rubric and scope one workflow.
-3. Map all ten supplied diagrams to your workflow. Preserve each module's conceptual flow; identify any inapplicable capability and justify it instead of inventing a need.
+3. Map all ten course diagrams to your workflow. Preserve each module's conceptual flow; identify any inapplicable capability and justify it instead of inventing a need.
 4. Add one real sandbox integration using a dedicated adapter. Keep the existing synthetic path and prove both contracts. Never use production money or production deployment privileges in the course.
 5. Add at least 15 labeled cases: happy path, missing evidence, conflicting evidence, malformed action, tenant boundary, duplicate request, provider timeout, review rejection and recovery.
 6. Demonstrate independent review, retry/idempotency semantics and restart behavior.
