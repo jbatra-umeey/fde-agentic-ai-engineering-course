@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools==82.0.1", "wheel==0.46.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jev-agent-engineering"
+version = "0.1.0"
+description = "Ten agent engineering disciplines in one executable reference monorepo"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi==0.162.0", "uvicorn==0.54.0", "httpx==0.28.1", "pydantic==2.14.1",
+  "opentelemetry-sdk==1.45.1", "opentelemetry-exporter-otlp-proto-http==1.45.1"
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "pytest-asyncio==1.4.0", "pytest-cov==7.1.0", "ruff==0.17.2", "build==1.6.1"]
+
+[project.scripts]
+jev = "jev_cli.main:main"
+jev-eval = "jev_evals.runner:main"
+
+[tool.setuptools.packages.find]
+where = ["packages/core/src", "packages/tools/src", "packages/workflows/src", "packages/evals/src", "apps/api/src", "apps/cli/src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]

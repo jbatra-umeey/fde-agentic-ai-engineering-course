@@ -1,0 +1,23 @@
+services:
+  api:
+    build: .
+    env_file: .env
+    environment:
+      JEV_DB: /data/jev.sqlite
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - jev-data:/data
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    pids_limit: 100
+    mem_limit: 512m
+    cpus: 1.0
+volumes:
+  jev-data:
