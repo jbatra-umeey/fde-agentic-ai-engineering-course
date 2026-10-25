@@ -114,83 +114,83 @@
     },
     {
       "path": "docs/diagrams/01-harness-engineering.png",
-      "sha256": "7d88efcc7987282bd18a66b3b4c02c8673e03cc7deaed43fb3b426c13f147284"
+      "sha256": "8270f520e7c498ee69a935c09db3280b77988f9aba08080f9a3fc754af555676"
     },
     {
       "path": "docs/diagrams/01-harness-engineering.svg",
-      "sha256": "2154edea686a15f82a9c882d05d97ed38d1ba627d91198513dc61998522db2a5"
+      "sha256": "652244694d45dcb374f467e6f00c8849a8db9b1ebc3ed1535d8c1e1fe4c5a558"
     },
     {
       "path": "docs/diagrams/02-loop-engineering.png",
-      "sha256": "cb2ea15838169a5352efdb11eeedc619291c5929845a7030a688552d9769a350"
+      "sha256": "95ff5252eb36b12de8b257ed9d5e462fea047dab4d176df703304d206b1fb680"
     },
     {
       "path": "docs/diagrams/02-loop-engineering.svg",
-      "sha256": "fb363f2b9e98723beadfcf144c6cec88cd7854634824c97a1ce31c8ef908363e"
+      "sha256": "7ebb99704e921f459bdc966b7e88667a1117eb4105c85b5f104e35fe69575410"
     },
     {
       "path": "docs/diagrams/03-context-engineering.png",
-      "sha256": "9b68dd754335ae5302ea69a25f5943dd12b16717101af4c480e5ddd1b6f6af63"
+      "sha256": "af926392188129f71238759742e0d33c3391d7681a1751fef5fe16278edebbdf"
     },
     {
       "path": "docs/diagrams/03-context-engineering.svg",
-      "sha256": "03d1e4e28dddc08cdbe9f83de3bbc80b47ed47bfdc254d7deb10eb1f14810fa4"
+      "sha256": "5c0b82dbf2fa9a14c5a7cae00ac3f480a2248a62c4e527a3558aa5ce0d9718db"
     },
     {
       "path": "docs/diagrams/04-tool-design.png",
-      "sha256": "128da4bb80f1c19b6ec50a0486243a8b65ca64f0176e267673a6a1e283a15bc2"
+      "sha256": "6c7f90b25b68f554eac5730464285e75c013d8a73a47d23a5dd735214315890e"
     },
     {
       "path": "docs/diagrams/04-tool-design.svg",
-      "sha256": "53f34647f9e31336f9a0edf4b720d62026fb5378213bebce693e17c3a834d273"
+      "sha256": "1f46593f16a1424cb76f52b2e2e71df051e3c3579e4e71ef204ecc9d0cf4a22d"
     },
     {
       "path": "docs/diagrams/05-memory-architecture.png",
-      "sha256": "260480e535c56bcd6ec9e1f090d41a8909699be3ee5ea9e9951a7b1d067a33b2"
+      "sha256": "ee72de0c579378cf6e9e7e35856bb9159c3f3095c1bee2226329d3218d089644"
     },
     {
       "path": "docs/diagrams/05-memory-architecture.svg",
-      "sha256": "cf2cbf1be9e912952a9b618d191379afbe16802e9a8c5b09ca9ca0b9ca50c276"
+      "sha256": "7d610bc7e10947fca91f0c74832e379a3c03d3907f3212dc8b2b2b4874e81fe8"
     },
     {
       "path": "docs/diagrams/06-orchestration-patterns.png",
-      "sha256": "b808e97377d98d22c4ec438835084932e702d866e3724f09746eda76f0d2c468"
+      "sha256": "b27ba142de90ea91fe5464d5a7107005b8709330eee2784c5d66280d95a7359d"
     },
     {
       "path": "docs/diagrams/06-orchestration-patterns.svg",
-      "sha256": "f5222310a012cccab1bb75f5ef681571d040de50e5d65cfb0adb96350387e6b8"
+      "sha256": "f9ddf05b1b594e942330b4c731c1145d32f682a75a6cd938224072ecd33b1fd6"
     },
     {
       "path": "docs/diagrams/07-guardrails-and-permissions.png",
-      "sha256": "eaff222b612df7c55e01d770970597832d8e2dd9e413790b68e987e68b349839"
+      "sha256": "430aa7771fb8f7c7d8af356136289fd6d7b9b2d4911030aa2f13ef870b50a3f1"
     },
     {
       "path": "docs/diagrams/07-guardrails-and-permissions.svg",
-      "sha256": "c69dbea593a493397fc639d5c58bb4a2715b3bd82f3d1252942cc1c91a006b3d"
+      "sha256": "eabc753d1eec404eeb55789033378ff7774b89a4822c8bc68d245329d90811fd"
     },
     {
       "path": "docs/diagrams/08-evals-for-agents.png",
-      "sha256": "f50ef03129d30453f77b9d44eb8e8ed03ed97c2a393c49f02d7faaaad7125125"
+      "sha256": "5e915d163c9d5962bf548d901c8d1fed9408e001c0b36d4006647f37bfff7e38"
     },
     {
       "path": "docs/diagrams/08-evals-for-agents.svg",
-      "sha256": "a94b86b5241596dc35bd37ca6377c5ce5a0286eb612fff57bc58441df85b76ac"
+      "sha256": "edf484edceafbc35158edae0d6f32dee40dea92c708a2161f1faa0b9fd6a30dd"
     },
     {
       "path": "docs/diagrams/09-human-in-the-loop-design.png",
-      "sha256": "e6ae1bc342684c2ad59ebcbb692a119ee74abd59b0697080e4bef1cff703e2c1"
+      "sha256": "1079deea85553abca165f8112c282db68e3a55f4266b2f55c8992bfa1110c55a"
     },
     {
       "path": "docs/diagrams/09-human-in-the-loop-design.svg",
-      "sha256": "24084693dbe8ca3282bdef30a17e8036e67836136a578cfaf3c7e8df5a37aa70"
+      "sha256": "7c018ce5072a45b58d801abec069f2e7bae5e0d03d5b3b9ea26da3b8f32faba0"
     },
     {
       "path": "docs/diagrams/10-observability-and-tracing.png",
-      "sha256": "6d5d6350d3012960f126d358ec686bbcfbbc3505fb94a96c7a81b62a0b977c86"
+      "sha256": "b99a45f020fa8443be4f89b1963edd936872aeb6c87c283379fbc6d1264e2599"
     },
     {
       "path": "docs/diagrams/10-observability-and-tracing.svg",
-      "sha256": "86b2fb5f0b3c03ff2710f2b54a7c65d8dbb40337249b80dcd4746032d1fbf875"
+      "sha256": "02b62b4f53a320742c7e39182a039fdd635d3c98157f1c2b1bbe011b284d1ae2"
     },
     {
       "path": "docs/diagrams/README.md",
