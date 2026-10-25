@@ -4,7 +4,7 @@ Repository: [jbatra-umeey/fde-agentic-ai-engineering-course](https://github.com/
 
 **A practical course for aspiring Forward Deployed Engineers: turn a customer problem into a reliable agent workflow.**
 
-Ten photo-aligned modules connect the original diagrams to runnable code, customer discovery, failure drills and production handover. The reference implementation uses Python, FastAPI, Pydantic, SQLite and OpenTelemetry. It includes an authenticated API, a CLI, ten focused walkthroughs and five end-to-end scenarios.
+Ten illustrated modules connect the original diagrams to runnable code, customer discovery, failure drills and production handover. The reference implementation uses Python, FastAPI, Pydantic, SQLite and OpenTelemetry. It includes an authenticated API, a CLI, ten focused walkthroughs and five end-to-end scenarios.
 
 This is a tested reference implementation with production-oriented controls. It is **not a certified production deployment**. Fixture mode is deterministic and uses synthetic data. A configurable live-model adapter is implemented, but live-provider behavior and real external integrations require separate validation. See [verification evidence](reports/VALIDATION.md) and [production readiness](docs/PRODUCTION_READINESS.md).
 
@@ -25,6 +25,12 @@ pytest -q
 
 On Windows, activate with `.venv\Scripts\Activate.ps1`. The offline examples need no model key and make no external API calls. `--simulate-review` explicitly simulates an independent reviewer for teaching; the REST API never auto-approves.
 
+## Illustrated learning guide
+
+Each topic has a visual walkthrough with icons, colored cards, directional arrows and a step-by-step explanation. Open the [full diagram gallery](docs/diagrams/README.md) for all ten illustrations and editable SVG downloads.
+
+![Harness Engineering illustrated overview](docs/diagrams/01-harness-engineering.png)
+
 ## Learn the ten disciplines
 
 | Module | What you will deliver |
@@ -40,7 +46,7 @@ On Windows, activate with `.venv\Scripts\Activate.ps1`. The offline examples nee
 | [9. Human-in-the-Loop Design](docs/modules/09-human-in-the-loop-design.md) | A durable independent-review workflow |
 | [10. Observability & Tracing](docs/modules/10-observability-and-tracing.md) | An explainable run history and support plan |
 
-Each module has the matching diagram, plain-language explanation, code entry point, runnable example, hands-on lab, failure exercise and acceptance criteria. See the [photo-to-code map](docs/PHOTO_ALIGNMENT.md) to audit coverage.
+Each module has the matching diagram, plain-language explanation, code entry point, runnable example, hands-on lab, failure exercise and acceptance criteria. See the [concept-to-code map](docs/PHOTO_ALIGNMENT.md) to audit coverage.
 
 ## Five customer-facing scenarios
 
