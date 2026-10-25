@@ -25,10 +25,10 @@ The coverage figure excludes CLI scripts and does not imply every production fai
 ## Warning and unexecuted work
 
 - One dependency deprecation warning: the installed Starlette TestClient warns about its HTTPX integration. Tests pass; track the dependency's migration guidance before the next upgrade.
-- Docker is unavailable in this execution environment. Dockerfile and Compose configuration are included, but container build/runtime and image scanning are not verified here.
-- Hosted GitHub Actions has not run because this repository has not been published.
+- Docker build, Compose startup, seeding and the API health check passed in [GitHub Actions run 40166920728](https://github.com/jbatra-umeey/fde-agentic-ai-engineering-course/actions/runs/40166920728) on commit `c626d82`. Image vulnerability scanning was not performed.
+- The published baseline passed hosted CI. Subsequent run results are available in the repository Actions tab.
 - External business-system integrations, actual model-provider compatibility, production load/SLOs, vulnerability auditing, penetration testing and collector/backend delivery were not tested.
-- Mermaid syntax was parsed; diagrams were not graphically rendered for a pixel-level layout review.
+- Mermaid syntax was parsed. Ten PNG/SVG illustrations were rendered and visually reviewed; the SVG sources contain no footer labels.
 
 An initial tracing walkthrough failed because environment sampling omitted spans. The in-memory teaching/test exporter now uses explicit always-on sampling; the final suite passes. Production exporter sampling continues to use standard OpenTelemetry configuration.
 
