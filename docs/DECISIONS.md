@@ -18,7 +18,7 @@ Decision: keep deterministic fixtures as the default and provide a separate conf
 
 ## ADR 005 — Proposals precede consequential effects
 
-Decision: preserve the photo's output→human-review flow, interpreting the first output as a proposal. Reason: review must happen before an irreversible effect. Tradeoff: reviewer latency and queue ownership become part of the system. Do not bypass the gate for a faster demo.
+Decision: use an output→human-review flow, interpreting the first output as a proposal. Reason: review must happen before an irreversible effect. Tradeoff: reviewer latency and queue ownership become part of the system. Do not bypass the gate for a faster demo.
 
 ## ADR 006 — Local atomicity, explicit remote boundary
 

@@ -1,6 +1,6 @@
 # Implementation architecture
 
-The [ten module diagrams](PHOTO_ALIGNMENT.md) preserve the supplied conceptual flows. The diagrams below show how those concepts are implemented together; they do not replace the original teaching diagrams.
+The [concept map](CONCEPT_MAP.md) connects the ten disciplines to their implementation. The diagrams below show how the components work together; the [illustrated guide](illustrations/README.md) introduces each concept.
 
 ## Components and trust boundaries
 
