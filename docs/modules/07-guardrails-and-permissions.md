@@ -10,9 +10,9 @@ Guardrails validate the request and output. Permissions determine who may access
 
 ## Illustrated overview
 
-![7. Guardrails & Permissions: illustrated flow and step-by-step explanation](../diagrams/07-guardrails-and-permissions.png)
+![7. Guardrails & Permissions: illustrated flow and step-by-step explanation](../diagrams/07-guardrails-and-permissions.png?v=footer-free-2)
 
-[Download editable SVG](../diagrams/07-guardrails-and-permissions.svg)
+[Download editable SVG](../diagrams/07-guardrails-and-permissions.svg?v=footer-free-2)
 
 ## Technical flow
 

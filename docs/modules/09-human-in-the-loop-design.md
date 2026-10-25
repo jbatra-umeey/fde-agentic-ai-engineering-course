@@ -10,9 +10,9 @@ The photo's flow is preserved: a human sets the goal, the agent produces an outp
 
 ## Illustrated overview
 
-![9. Human-in-the-Loop Design: illustrated flow and step-by-step explanation](../diagrams/09-human-in-the-loop-design.png)
+![9. Human-in-the-Loop Design: illustrated flow and step-by-step explanation](../diagrams/09-human-in-the-loop-design.png?v=footer-free-2)
 
-[Download editable SVG](../diagrams/09-human-in-the-loop-design.svg)
+[Download editable SVG](../diagrams/09-human-in-the-loop-design.svg?v=footer-free-2)
 
 ## Technical flow
 

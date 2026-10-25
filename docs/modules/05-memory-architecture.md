@@ -10,9 +10,9 @@ Short-term memory describes the current session. Long-term memory carries approv
 
 ## Illustrated overview
 
-![5. Memory Architecture: illustrated flow and step-by-step explanation](../diagrams/05-memory-architecture.png)
+![5. Memory Architecture: illustrated flow and step-by-step explanation](../diagrams/05-memory-architecture.png?v=footer-free-2)
 
-[Download editable SVG](../diagrams/05-memory-architecture.svg)
+[Download editable SVG](../diagrams/05-memory-architecture.svg?v=footer-free-2)
 
 ## Technical flow
 

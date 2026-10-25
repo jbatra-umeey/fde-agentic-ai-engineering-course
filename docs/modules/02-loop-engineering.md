@@ -10,9 +10,9 @@ A loop is a sequence of plan, act and observe steps. Each observation changes wh
 
 ## Illustrated overview
 
-![2. Loop Engineering: illustrated flow and step-by-step explanation](../diagrams/02-loop-engineering.png)
+![2. Loop Engineering: illustrated flow and step-by-step explanation](../diagrams/02-loop-engineering.png?v=footer-free-2)
 
-[Download editable SVG](../diagrams/02-loop-engineering.svg)
+[Download editable SVG](../diagrams/02-loop-engineering.svg?v=footer-free-2)
 
 ## Technical flow
 

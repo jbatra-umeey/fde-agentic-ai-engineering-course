@@ -10,9 +10,9 @@ Events record business transitions, metrics summarize outcomes, and traces show 
 
 ## Illustrated overview
 
-![10. Observability & Tracing: illustrated flow and step-by-step explanation](../diagrams/10-observability-and-tracing.png)
+![10. Observability & Tracing: illustrated flow and step-by-step explanation](../diagrams/10-observability-and-tracing.png?v=footer-free-2)
 
-[Download editable SVG](../diagrams/10-observability-and-tracing.svg)
+[Download editable SVG](../diagrams/10-observability-and-tracing.svg?v=footer-free-2)
 
 ## Technical flow
 

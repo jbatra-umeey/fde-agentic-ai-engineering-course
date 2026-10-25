@@ -10,9 +10,9 @@ Context is the information presented to the planner right now. It is assembled f
 
 ## Illustrated overview
 
-![3. Context Engineering: illustrated flow and step-by-step explanation](../diagrams/03-context-engineering.png)
+![3. Context Engineering: illustrated flow and step-by-step explanation](../diagrams/03-context-engineering.png?v=footer-free-2)
 
-[Download editable SVG](../diagrams/03-context-engineering.svg)
+[Download editable SVG](../diagrams/03-context-engineering.svg?v=footer-free-2)
 
 ## Technical flow
 

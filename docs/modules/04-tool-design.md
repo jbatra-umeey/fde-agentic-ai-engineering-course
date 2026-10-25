@@ -10,9 +10,9 @@ A tool is a narrow typed capability, not a general-purpose command channel. Its 
 
 ## Illustrated overview
 
-![4. Tool Design: illustrated flow and step-by-step explanation](../diagrams/04-tool-design.png)
+![4. Tool Design: illustrated flow and step-by-step explanation](../diagrams/04-tool-design.png?v=footer-free-2)
 
-[Download editable SVG](../diagrams/04-tool-design.svg)
+[Download editable SVG](../diagrams/04-tool-design.svg?v=footer-free-2)
 
 ## Technical flow
 

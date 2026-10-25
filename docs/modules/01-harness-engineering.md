@@ -10,9 +10,9 @@ The harness is the operating environment around the agent: instructions, identit
 
 ## Illustrated overview
 
-![1. Harness Engineering: illustrated flow and step-by-step explanation](../diagrams/01-harness-engineering.png)
+![1. Harness Engineering: illustrated flow and step-by-step explanation](../diagrams/01-harness-engineering.png?v=footer-free-2)
 
-[Download editable SVG](../diagrams/01-harness-engineering.svg)
+[Download editable SVG](../diagrams/01-harness-engineering.svg?v=footer-free-2)
 
 ## Technical flow
 

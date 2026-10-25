@@ -10,9 +10,9 @@ The orchestrator owns assignment, coordination and aggregation. In the reference
 
 ## Illustrated overview
 
-![6. Orchestration Patterns: illustrated flow and step-by-step explanation](../diagrams/06-orchestration-patterns.png)
+![6. Orchestration Patterns: illustrated flow and step-by-step explanation](../diagrams/06-orchestration-patterns.png?v=footer-free-2)
 
-[Download editable SVG](../diagrams/06-orchestration-patterns.svg)
+[Download editable SVG](../diagrams/06-orchestration-patterns.svg?v=footer-free-2)
 
 ## Technical flow
 
