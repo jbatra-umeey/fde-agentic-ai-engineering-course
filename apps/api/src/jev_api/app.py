@@ -1,5 +1,7 @@
 """App factory avoids import-time secrets or connections. Swagger is the API explorer."""
 
+import asyncio
+import json
 import os
 from contextlib import asynccontextmanager
 from typing import Annotated
@@ -7,6 +9,7 @@ from typing import Annotated
 from fastapi import Depends, FastAPI, Header, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
+from jev_core.inference import usage_summary
 from jev_core.models import Approval, DomainError, Principal, RunRequest
 from jev_core.providers import configured_planner
 from jev_core.runtime import Harness
@@ -53,14 +56,26 @@ class BodyLimit:
 def create_app(store=None, planner=None, identities=None):
     store = store or Store(os.getenv("JEV_DB", "var/jev.sqlite"))
     identities = identities if identities is not None else load_identities()
-    harness = Harness(store, Registry(), planner or configured_planner())
+    planner = planner or configured_planner()
+    harness = Harness(store, Registry(getattr(planner, "router", None)), planner)
+
+    concurrency = int(os.getenv("JEV_MAX_CONCURRENT_RUNS", "4"))
+    if not 1 <= concurrency <= 32:
+        raise ValueError("JEV_MAX_CONCURRENT_RUNS must be between 1 and 32")
+    slots = asyncio.Semaphore(concurrency)
+
+    async def execute(tenant, run_id):
+        if slots.locked():
+            raise DomainError("run_capacity_exceeded", 429)
+        async with slots:
+            return await harness.run(tenant, run_id)
 
     @asynccontextmanager
     async def lifespan(_app):
         yield
         harness.telemetry.close()
 
-    app = FastAPI(title="Jev Agent Engineering", version="0.1.0", lifespan=lifespan)
+    app = FastAPI(title="Jev Agent Engineering", version="0.2.0", lifespan=lifespan)
     app.add_middleware(BodyLimit)
     app.state.store, app.state.harness = store, harness
 
@@ -96,7 +111,7 @@ def create_app(store=None, planner=None, identities=None):
         idempotency_key: Annotated[str, Header(min_length=8, max_length=100)],
     ):
         state = store.create(p, body, idempotency_key)
-        return await harness.run(p.tenant, state["id"])
+        return await execute(p.tenant, state["id"])
 
     @app.get("/v1/runs/{run_id}")
     def get(run_id: str, p: User):
@@ -111,12 +126,12 @@ def create_app(store=None, planner=None, identities=None):
         state = store.get(p.tenant, run_id)
         if p.role != "operator" or state["owner"] != p.subject:
             raise DomainError("owner_operator_required", 403)
-        return await harness.run(p.tenant, run_id)
+        return await execute(p.tenant, run_id)
 
     @app.post("/v1/runs/{run_id}/review")
     async def review(run_id: str, body: Approval, p: User):
         store.approve(p, run_id, body)
-        return await harness.run(p.tenant, run_id)
+        return await execute(p.tenant, run_id)
 
     @app.delete("/v1/memory", status_code=204)
     def forget(p: User):
@@ -130,7 +145,11 @@ def create_app(store=None, planner=None, identities=None):
                 "WHERE tenant=? GROUP BY status",
                 (p.tenant,),
             ).fetchall()
-        return {"runs_by_status": {r["status"]: r["n"] for r in counts}}
+            records = c.execute("SELECT state FROM runs WHERE tenant=?", (p.tenant,)).fetchall()
+        usage = usage_summary(
+            [call for row in records for call in json.loads(row["state"]).get("inference", [])]
+        )
+        return {"runs_by_status": {r["status"]: r["n"] for r in counts}, "model_usage": usage}
 
     @app.middleware("http")
     async def security_headers(request: Request, call_next):
