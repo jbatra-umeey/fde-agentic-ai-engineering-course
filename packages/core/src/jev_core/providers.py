@@ -1,14 +1,11 @@
-"""Provider boundary. Fixture mode is scripted, not an LLM or autonomous learning."""
+"""Fixture and real structured planners share the same authorization boundary."""
 
-import asyncio
-import json
 import os
 from typing import Protocol
-from urllib.parse import urlparse
 
-import httpx
-
-from .models import Decision, canonical
+from .inference import HTTPModel, ModelConfig, ModelRouter, RoutingConfig, configured_router
+from .models import Decision
+from .prompt_registry import load_prompt
 
 
 class Planner(Protocol):
@@ -79,79 +76,47 @@ class FixturePlanner:
         )
 
 
-class HTTPPlanner:
-    """Explicit opt-in chat-completions-compatible JSON planner.
-
-    Endpoint/model are operator configuration, never model/user controlled.
-    Bounded retries apply only to model reads, never write tools.
-    """
-
-    def __init__(self, endpoint, model, api_key, transport=None):
-        parsed = urlparse(endpoint)
-        if (
-            parsed.scheme != "https"
-            or not parsed.hostname
-            or parsed.username
-            or parsed.password
-            or parsed.query
-            or parsed.fragment
-        ):
-            raise ValueError("Model endpoint must be a credential-free HTTPS URL")
-        if not model or not api_key:
-            raise ValueError("Model and key required")
-        self.endpoint, self.model, self.api_key = endpoint, model, api_key
-        self.transport = transport
+class LLMPlanner:
+    def __init__(self, router):
+        self.router = router
 
     async def decide(self, context):
-        schema = Decision.model_json_schema()
-        payload = {
-            "model": self.model,
-            "temperature": 0,
-            "max_tokens": 1500,
-            "messages": [
-                {"role": "system", "content": context["system"] + " Schema: " + canonical(schema)},
-                {
-                    "role": "user",
-                    "content": canonical({k: v for k, v in context.items() if k != "system"}),
-                },
-            ],
-            "response_format": {"type": "json_object"},
-        }
-        async with httpx.AsyncClient(
-            transport=self.transport, timeout=8, follow_redirects=False, trust_env=False
-        ) as client:
-            for attempt in range(3):
-                try:
-                    async with client.stream(
-                        "POST",
-                        self.endpoint,
-                        json=payload,
-                        headers={"Authorization": f"Bearer {self.api_key}"},
-                    ) as r:
-                        if r.status_code in {429, 502, 503, 504} and attempt < 2:
-                            await asyncio.sleep(0.1 * (2**attempt))
-                            continue
-                        r.raise_for_status()
-                        chunks = bytearray()
-                        async for chunk in r.aiter_bytes():
-                            chunks.extend(chunk)
-                            if len(chunks) > 65536:
-                                raise ValueError("Provider response too large")
-                    body = json.loads(chunks)
-                    return Decision.model_validate_json(body["choices"][0]["message"]["content"])
-                except (httpx.ConnectError, httpx.TimeoutException):
-                    if attempt == 2:
-                        raise
-                    await asyncio.sleep(0.1 * (2**attempt))
-        raise RuntimeError("Provider exhausted")
+        return await self.router.generate(
+            load_prompt("planner"),
+            {k: v for k, v in context.items() if k != "system"},
+            Decision,
+            "planner:" + context.get("scenario", "knowledge"),
+        )
 
 
-def configured_planner():
+class HTTPPlanner(LLMPlanner):
+    """Backward-compatible JSON-mode adapter; new configurations use native tool output."""
+
+    def __init__(self, endpoint, model, api_key, transport=None):
+        config = ModelConfig(
+            provider="openai_compatible", endpoint=endpoint, model=model, key_env="JEV_MODEL_KEY"
+        )
+        model_client = HTTPModel(config, key=api_key, transport=transport, json_mode=True)
+        super().__init__(
+            ModelRouter(
+                RoutingConfig(models={"legacy": config}, routes={"default": ["legacy"]}),
+                {"legacy": model_client},
+            )
+        )
+
+
+def configured_planner(require_live=False):
     mode = os.getenv("JEV_PLANNER", "fixture")
     if mode == "fixture":
+        if require_live:
+            raise ValueError(
+                "--live requires JEV_PLANNER=router or http; refusing fixture fallback"
+            )
         return FixturePlanner()
-    if mode != "http":
-        raise ValueError("JEV_PLANNER must be fixture or http")
-    return HTTPPlanner(
-        os.environ["JEV_MODEL_ENDPOINT"], os.environ["JEV_MODEL"], os.environ["JEV_MODEL_KEY"]
-    )
+    if mode == "router":
+        return LLMPlanner(configured_router())
+    if mode == "http":
+        return HTTPPlanner(
+            os.environ["JEV_MODEL_ENDPOINT"], os.environ["JEV_MODEL"], os.environ["JEV_MODEL_KEY"]
+        )
+    raise ValueError("JEV_PLANNER must be fixture, http or router")
