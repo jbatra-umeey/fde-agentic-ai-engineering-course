@@ -53,3 +53,9 @@ Set `JEV_PLANNER=http`, `JEV_MODEL_ENDPOINT` to an approved HTTPS chat-completio
 The endpoint must support the request fields used in `HTTPPlanner`. Compatibility with a specific hosted model has not been established by fixture or mock-transport tests. Use a dedicated development account, inspect actual tool trajectories, verify data handling and run the customer evaluation set before enabling writes.
 
 There are no built-in provider names, live credentials or arbitrary user-configurable endpoints. The operator controls egress configuration. The API and CLI fixture demo are separate paths; `jev demo` always remains synthetic.
+
+## Live inference metadata
+
+With `JEV_PLANNER=router`, the same endpoints execute the configured live planner and specialists. Run responses include `model_calls`, per-attempt `inference` records and aggregate `usage`. The events endpoint includes model attempt reservations/completions. `/v1/metrics` adds tenant-scoped `model_usage`; check unknown usage and unpriced counts before interpreting totals. Never treat HTTP 200 as task success: inspect the run's terminal `status` and `error`.
+
+The API enforces a configurable per-process run concurrency cap and returns 429 when full. A review can already have committed its authorized local effect before capacity blocks automatic continuation; use the operator resume endpoint to continue that run instead of submitting the approval again. See [configuration](LIVE_INFERENCE.md).

@@ -25,7 +25,7 @@ The container build and Compose runtime must be tested in your own environment i
 |---|---|
 | `JEV_DB` | Persistent SQLite path; default `var/jev.sqlite` |
 | `JEV_IDENTITIES_JSON` | SHA-256 token hashes mapped to tenant/subject/role |
-| `JEV_PLANNER` | `fixture` by default, or explicit `http` |
+| `JEV_PLANNER` | `fixture` by default, explicit `router` or legacy `http` |
 | `JEV_MODEL_ENDPOINT`, `JEV_MODEL`, `JEV_MODEL_KEY` | Optional approved model connection |
 | `JEV_OTLP_TRACES_ENDPOINT` | Optional OTLP HTTP trace endpoint, typically ending in `/v1/traces` |
 | `OTEL_TRACES_SAMPLER` | Standard OpenTelemetry sampling policy |
@@ -68,3 +68,11 @@ Spans intentionally omit prompts, raw output and exception bodies. Durable run r
 ## Rollback
 
 Keep the previous application artifact and tested database backup. Stop new work, allow or explicitly interrupt in-flight work, preserve outstanding proposals, roll back the application version and verify schema compatibility. Version 1 rejects an unknown newer schema. Future migrations must document forward/backward compatibility and be tested with production-like data.
+
+## Multi-provider operations
+
+Follow [live inference and model operations](LIVE_INFERENCE.md) for route configuration, fallback, model budgets, OTLP metrics and the explicit Docker live override. Use [evaluation gates](EVALUATION.md) before promoting a model or prompt change.
+
+## Release delivery
+
+Pull-request CI builds/tests the wheel, starts Compose and verifies container health. Publishing a GitHub Release triggers `release.yml`: it reruns offline gates and Compose smoke before publishing a tagged image to GHCR with build provenance and an SBOM, and uploads Python distributions. Configure the `course-release` environment and package permissions before the first release. This workflow does not deploy into a customer environment; promotion, ingress, identities, database backup and rollback remain operator responsibilities. No image publication or release deployment is claimed until that workflow has run successfully. The current base image and action versions are tag-pinned; pin digests/commit SHAs and add vulnerability-policy enforcement for a production release.
