@@ -42,3 +42,7 @@ Pair exercise: one learner is the customer sponsor, one is the FDE, and one is t
 Use the [capstone rubric](CAPSTONE.md). A polished demo does not compensate for cross-tenant access, unapproved effects or misleading claims. Learners must distinguish tested fixture behavior, mocked-provider contracts, live integration evidence and deployment assumptions.
 
 Every module's reference solution is in the linked implementation and its executable lesson. A lab intentionally changes the scenario so learners must apply the concept rather than copy the solution verbatim.
+
+## Advanced live systems track
+
+After the original ten modules, complete the [live systems practicum](labs/LIVE_SYSTEMS.md): real providers, model routing, specialist orchestration, judge evaluation, prompt regression and observable operations.
