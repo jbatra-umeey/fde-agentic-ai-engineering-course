@@ -1,33 +1,14 @@
-.....................................................                    [100%]
+........................................................................ [ 74%]
+.........................                                                [100%]
 =============================== warnings summary ===============================
-../.venv/lib/python3.12/site-packages/fastapi/testclient.py:1
-  /workspace/scratch/8bbf368e8254/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+.venv/lib/python3.12/site-packages/fastapi/testclient.py:1
+  /workspace/scratch/1319b25ad236/course/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
     from starlette.testclient import TestClient as TestClient  # noqa
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 ================================ tests coverage ================================
 _______________ coverage: platform linux, python 3.12.14-final-0 _______________
 
-Name                                                Stmts   Miss  Cover
------------------------------------------------------------------------
-apps/api/src/jev_api/__init__.py                        0      0   100%
-apps/api/src/jev_api/app.py                           103      6    94%
-apps/api/src/jev_api/security.py                       30     13    57%
-packages/core/src/jev_core/__init__.py                  0      0   100%
-packages/core/src/jev_core/context.py                  21      2    90%
-packages/core/src/jev_core/models.py                   41      2    95%
-packages/core/src/jev_core/providers.py                75      8    89%
-packages/core/src/jev_core/runtime.py                  65      2    97%
-packages/core/src/jev_core/store.py                   153      6    96%
-packages/core/src/jev_core/telemetry.py                27      1    96%
-packages/evals/src/jev_evals/__init__.py                0      0   100%
-packages/evals/src/jev_evals/runner.py                 54     13    76%
-packages/tools/src/jev_tools/__init__.py                0      0   100%
-packages/tools/src/jev_tools/registry.py               51      1    98%
-packages/workflows/src/jev_workflows/__init__.py        0      0   100%
-packages/workflows/src/jev_workflows/patterns.py       59      4    93%
-packages/workflows/src/jev_workflows/scenarios.py       5      0   100%
------------------------------------------------------------------------
-TOTAL                                                 684     58    92%
 Coverage JSON written to file reports/coverage.json
-53 passed, 1 warning in 3.88s
+Required test coverage of 85% reached. Total coverage: 93.39%
+97 passed, 1 warning in 5.12s

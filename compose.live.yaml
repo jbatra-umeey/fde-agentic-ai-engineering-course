@@ -1,0 +1,8 @@
+# Explicit override. The local model config contains key variable names, never values.
+services:
+  api:
+    environment:
+      JEV_PLANNER: router
+      JEV_MODELS_CONFIG: /app/config/models.json
+    volumes:
+      - ./config/models.local.json:/app/config/models.json:ro

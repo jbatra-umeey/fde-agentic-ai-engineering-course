@@ -40,6 +40,7 @@ class Tool:
     schema: type[StrictModel]
     handler: Callable[..., Awaitable[dict]] | None
     write: bool = False
+    timeout_seconds: float = 3
 
 
 async def search(store, principal, args):
@@ -75,7 +76,12 @@ ALLOWED = {
 
 
 class Registry:
-    def __init__(self):
+    def __init__(self, router=None):
+        async def live_review(store, principal, args):
+            from jev_workflows.agents import llm_release_review
+
+            return await llm_release_review(router, args["dataset"], store.docs(principal.tenant))
+
         tools = [
             Tool(
                 "search_knowledge",
@@ -113,7 +119,8 @@ class Registry:
                 "release_review",
                 "Run independent performance and security specialists on synthetic data.",
                 ReleaseArgs,
-                review,
+                live_review if router else review,
+                timeout_seconds=25 if router else 3,
             ),
         ]
         self.tools = {t.name: t for t in tools}

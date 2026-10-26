@@ -4,18 +4,18 @@ This repository is a course and a runnable engineering reference. Production-ori
 
 | Area | Implemented baseline | Remaining work before customer launch |
 |---|---|---|
-| Harness and loops | Typed decisions, durable steps, limits, lease fencing | Load testing, global concurrency and budget policies |
+| Harness and loops | Typed decisions, durable steps, limits, lease fencing | Load testing, distributed concurrency and monetary budget policies |
 | Context | Tenant-scoped lexical retrieval, source IDs, byte cap | Customer source ingestion, freshness, per-document ACLs and retrieval-quality tests |
 | Tools | Narrow typed registry and deterministic authorization | Real connectors, contract tests, rate limits and remote failure semantics |
 | Memory | Opt-in, subject/session scope, TTL and delete | Data governance, sensitive-data filtering and full historical deletion |
-| Orchestration | Sequential, parallel, router, four specialist roles | Live specialist models and deployment-specific reliability tests if required |
+| Orchestration | Sequential, parallel, router, four specialist roles | LLM supervisor/specialists implemented; verify real provider behavior and deployment reliability |
 | Human review | Exact-payload independent approval and atomic local effects | Reviewer notification, queue ownership, escalation and approval-expiry UX |
 | Identity | Hashed static-token map and roles | OIDC/service identity, key rotation process, fine-grained ACLs |
 | Persistence | SQLite WAL, transactional local effects, schema check | Backup/restore drills, migration strategy; PostgreSQL/queue if scale demands |
-| Evals | Five synthetic cases and negative/security tests | Real labeled corpus, held-out set, live-model repeats and calibrated rubric |
-| Observability | Structured events, tenant status metrics, OTel spans/exporter | Confirm collector delivery, dashboards, alerts, retention and runbooks |
+| Evals | Five golden cases, three injection cases, trajectory/baseline gates and optional LLM judge | Real labeled corpus, held-out set, live-model repeats and calibrated rubric |
+| Observability | Per-attempt tokens/latency/estimated cost, tenant totals, OTel spans and metrics | Confirm collector delivery, dashboards, alerts, retention and runbooks |
 | Packaging | Version-pinned dependencies, Dockerfile, Compose, CI definition | Verify image build/run, pin image digest, dependency/container vulnerability review |
-| Live model | HTTPS adapter and mock transport contract tests | Actual provider compatibility, quality, cost and privacy validation |
+| Live model | OpenAI/Anthropic adapters, typed routing/fallback, per-run accounting and HTTP contract tests | Actual provider compatibility, quality, cost and privacy validation |
 | Documentation | Ten illustrated lessons, field guide, capstone and operations | Learner pilot, publication rights review and chosen license |
 
 ## Guarantees deliberately not claimed
@@ -25,3 +25,7 @@ No proof of semantic factuality, prompt-injection immunity, distributed exactly-
 ## Release decision
 
 Use the handover template to record owner, evidence and status for each remaining item. Enable a restricted customer pilot only after its scoped acceptance criteria pass. Expand permissions and traffic incrementally, with rollback criteria defined in advance.
+
+## Upgrade evidence
+
+See [live operations](LIVE_INFERENCE.md), [evaluation discipline](EVALUATION.md) and [upgrade diagrams](UPGRADE_ARCHITECTURE.md). Provider compatibility tests use controlled HTTP transports unless the validation report explicitly identifies a live run. Cost estimates are not invoice reconciliation; missing usage/pricing remains unknown. No distributed budget service or tenant-wide monetary cap is implemented.

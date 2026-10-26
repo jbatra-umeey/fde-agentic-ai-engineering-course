@@ -6,7 +6,7 @@ Repository: [jbatra-umeey/fde-agentic-ai-engineering-course](https://github.com/
 
 Ten illustrated modules connect the original diagrams to runnable code, customer discovery, failure drills and production handover. The reference implementation uses Python, FastAPI, Pydantic, SQLite and OpenTelemetry. It includes an authenticated API, a CLI, ten focused walkthroughs and five end-to-end scenarios.
 
-This is a tested reference implementation with production-oriented controls. It is **not a certified production deployment**. Fixture mode is deterministic and uses synthetic data. A configurable live-model adapter is implemented, but live-provider behavior and real external integrations require separate validation. See [verification evidence](reports/VALIDATION.md) and [production readiness](docs/PRODUCTION_READINESS.md).
+This is a tested reference implementation with production-oriented controls. It is **not a certified production deployment**. Fixture mode is deterministic and uses synthetic data. Multi-provider inference, LLM specialists, routing/fallback, model judges and usage accounting are implemented. Live-provider behavior and real external integrations require separate validation. See [verification evidence](reports/VALIDATION.md) and [production readiness](docs/PRODUCTION_READINESS.md).
 
 ## Start here
 
@@ -24,6 +24,17 @@ pytest -q
 ```
 
 On Windows, activate with `.venv\Scripts\Activate.ps1`. The offline examples need no model key and make no external API calls. `--simulate-review` explicitly simulates an independent reviewer for teaching; the REST API never auto-approves.
+
+## Live inference upgrade
+
+The API, CLI and applicable lessons share real OpenAI-compatible and Anthropic inference, typed model routing/fallback, secure tool selection, bounded recovery and per-run usage accounting. Release reviews use an LLM supervisor and parallel specialists; evaluations can use a separately routed LLM judge. Offline fixtures remain the default.
+
+- [Setup, provider configuration and live commands](docs/LIVE_INFERENCE.md)
+- [Architecture, sequence, orchestration and deployment diagrams](docs/UPGRADE_ARCHITECTURE.md)
+- [Golden datasets, prompt versions and regression gates](docs/EVALUATION.md)
+- [Practical live exercises across all ten modules](course/labs/LIVE_SYSTEMS.md)
+
+`--live` requires configured provider credentials and may incur charges. It never silently falls back to fixture mode. Live release review deliberately returns HOLD without real scan evidence. All original illustrations and course modules remain available below.
 
 ## Illustrated learning guide
 

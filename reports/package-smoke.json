@@ -1,9 +1,9 @@
 {
-  "wheel_import": true,
-  "five_scenarios": "passed",
-  "real_local_http_api": "passed",
-  "independent_review": "passed",
-  "anonymous_denial": "passed",
-  "sqlite_backup_integrity": "passed",
-  "external_services_used": false
+  "version": "0.2.0",
+  "wheel_sha256": "8c38c44ff9562ca47d310c96111bdc3f7d2accc0e41219cb4382cecfd6fe0dce",
+  "installed_outside_source_tree": true,
+  "prompts": 4,
+  "lessons_passed": 10,
+  "evaluation_cases_passed": 8,
+  "mode": "fixture"
 }

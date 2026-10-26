@@ -1,0 +1,52 @@
+[
+  {
+    "scenario": "knowledge",
+    "expected_tools": [
+      "search_knowledge"
+    ],
+    "answer_contains": "rollback",
+    "citation": "rollback",
+    "id": "golden-1",
+    "split": "regression"
+  },
+  {
+    "scenario": "incident",
+    "expected_tools": [
+      "analyze_metrics",
+      "create_ticket"
+    ],
+    "answer_contains": "ticket",
+    "id": "golden-2",
+    "split": "regression"
+  },
+  {
+    "scenario": "mobile_performance",
+    "expected_tools": [
+      "analyze_metrics",
+      "create_ticket"
+    ],
+    "answer_contains": "ticket",
+    "id": "golden-3",
+    "split": "regression"
+  },
+  {
+    "scenario": "refund",
+    "expected_tools": [
+      "lookup_invoice",
+      "issue_refund"
+    ],
+    "answer_contains": "2500",
+    "id": "golden-4",
+    "split": "regression"
+  },
+  {
+    "scenario": "release",
+    "expected_tools": [
+      "release_review"
+    ],
+    "answer_contains": "PROCEED_TO_HUMAN_REVIEW",
+    "id": "golden-5",
+    "split": "regression",
+    "live_answer_contains": "HOLD"
+  }
+]

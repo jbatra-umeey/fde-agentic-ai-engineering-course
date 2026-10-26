@@ -3,13 +3,16 @@
 import asyncio
 import time
 
+from pydantic import ValidationError
+
 from .context import build_context
+from .inference import InferenceSession, inference_scope, usage_summary
 from .models import DomainError, Principal, digest
 from .telemetry import Telemetry
 
 
 class Harness:
-    def __init__(self, store, registry, planner, telemetry=None, max_steps=8, timeout=20):
+    def __init__(self, store, registry, planner, telemetry=None, max_steps=8, timeout=35):
         if not 1 <= max_steps <= 32 or not 0 < timeout < 40:
             raise ValueError("Budgets exceed supported lease window")
         self.store, self.registry, self.planner = store, registry, planner
@@ -22,9 +25,17 @@ class Harness:
             return self.store.get(tenant, run_id)
         state, lease = claimed
         p = Principal(tenant=tenant, subject=state["owner"], role="operator")
-        with self.telemetry.span(
-            "agent.run", run_id=run_id, scenario=state["request"]["scenario"]
-        ) as span:
+        session = InferenceSession(
+            self.telemetry,
+            state,
+            lambda event, data: self.store.checkpoint(tenant, state, lease, event, data),
+        )
+        with (
+            inference_scope(session),
+            self.telemetry.span(
+                "agent.run", run_id=run_id, scenario=state["request"]["scenario"]
+            ) as span,
+        ):
             trace_id = format(span.get_span_context().trace_id, "032x")
             try:
                 async with asyncio.timeout(self.timeout):
@@ -60,6 +71,21 @@ class Harness:
                                 and not decision.citations
                             ):
                                 raise DomainError("citations_required", 422)
+                            if state["request"]["scenario"] == "release":
+                                reviews = [
+                                    o["result"]
+                                    for o in state["observations"]
+                                    if o["tool"] == "release_review"
+                                    and "recommendation" in o["result"]
+                                ]
+                                if (
+                                    not reviews
+                                    or reviews[-1]["recommendation"].lower()
+                                    not in decision.answer.lower()
+                                ):
+                                    raise DomainError("release_policy_mismatch", 422)
+                                state["release_recommendation"] = reviews[-1]["recommendation"]
+                            state["usage"] = usage_summary(state["inference"])
                             state.update(
                                 status="succeeded",
                                 answer=decision.answer,
@@ -82,9 +108,15 @@ class Harness:
                                 release=True,
                             )
                             return state
-                        tool, args = self.registry.validate(
-                            state["request"]["scenario"], decision.tool, decision.arguments
-                        )
+                        try:
+                            tool, args = self.registry.validate(
+                                state["request"]["scenario"], decision.tool, decision.arguments
+                            )
+                        except ValidationError:
+                            self._recover(
+                                tenant, state, lease, decision.tool, "invalid_tool_arguments"
+                            )
+                            continue
                         if tool.write:
                             binding = {
                                 "run": run_id,
@@ -93,6 +125,7 @@ class Harness:
                                 "tool": decision.tool,
                                 "arguments": args,
                             }
+                            state["usage"] = usage_summary(state["inference"])
                             state.update(
                                 status="waiting",
                                 pending={
@@ -112,9 +145,13 @@ class Harness:
                             )
                             return state
                         start = time.perf_counter()
-                        with self.telemetry.span("tool.execute", tool=decision.tool):
-                            async with asyncio.timeout(3):
-                                result = await tool.handler(self.store, p, args)
+                        try:
+                            with self.telemetry.span("tool.execute", tool=decision.tool):
+                                async with asyncio.timeout(tool.timeout_seconds):
+                                    result = await tool.handler(self.store, p, args)
+                        except TimeoutError:
+                            self._recover(tenant, state, lease, decision.tool, "read_tool_timeout")
+                            continue
                         state["observations"].append({"tool": decision.tool, "result": result})
                         self.store.checkpoint(
                             tenant,
@@ -135,6 +172,7 @@ class Harness:
                 # Never send provider error bodies or exception text to logs/API.
                 if isinstance(exc, DomainError) and exc.code == "lease_lost":
                     raise
+                state["usage"] = usage_summary(state["inference"])
                 state.update(
                     status="failed",
                     error=exc.code if isinstance(exc, DomainError) else type(exc).__name__,
@@ -143,3 +181,13 @@ class Harness:
                     tenant, state, lease, "run.failed", {"code": state["error"]}, release=True
                 )
                 return state
+
+    def _recover(self, tenant, state, lease, tool, code):
+        state["recoveries"] = state.get("recoveries", 0) + 1
+        if state["recoveries"] > 2:
+            raise DomainError("tool_recovery_exhausted", 422)
+        # No rejected arguments or exception messages enter the feedback channel.
+        state["observations"].append({"tool": tool, "result": {"error": code, "retryable": True}})
+        self.store.checkpoint(
+            tenant, state, lease, "tool.recoverable_error", {"tool": tool, "code": code}
+        )

@@ -73,3 +73,7 @@ The retriever is intentionally lexical over a small corpus. Embeddings, rerankin
 
 [Course syllabus](../../course/SYLLABUS.md) · [Concept-to-code map](../CONCEPT_MAP.md) · [Production readiness](../PRODUCTION_READINESS.md)
 
+
+## Live systems extension
+
+Complete this module’s exercise in the [ten-module live practicum](../../course/labs/LIVE_SYSTEMS.md), using the [provider setup](../LIVE_INFERENCE.md) and [evaluation gates](../EVALUATION.md). The original walkthrough above remains the offline foundation.

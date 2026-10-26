@@ -1,0 +1,33 @@
+{
+  "models": {
+    "primary": {
+      "provider": "openai",
+      "endpoint": "https://api.openai.com/v1/chat/completions",
+      "model": "REPLACE_WITH_ENABLED_OPENAI_MODEL",
+      "key_env": "OPENAI_API_KEY",
+      "max_output_tokens": 1500,
+      "timeout_seconds": 5,
+      "retries": 1,
+      "input_usd_per_million": null,
+      "output_usd_per_million": null
+    },
+    "secondary": {
+      "provider": "anthropic",
+      "endpoint": "https://api.anthropic.com/v1/messages",
+      "model": "REPLACE_WITH_ENABLED_ANTHROPIC_MODEL",
+      "key_env": "ANTHROPIC_API_KEY",
+      "max_output_tokens": 1500,
+      "timeout_seconds": 5,
+      "retries": 1,
+      "input_usd_per_million": null,
+      "output_usd_per_million": null
+    }
+  },
+  "routes": {
+    "default": ["primary", "secondary"],
+    "planner:refund": ["primary"],
+    "supervisor": ["primary", "secondary"],
+    "specialist:security": ["secondary"],
+    "judge": ["secondary"]
+  }
+}
