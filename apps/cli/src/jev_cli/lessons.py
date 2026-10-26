@@ -5,7 +5,7 @@ from pathlib import Path
 
 from jev_core.context import build_context
 from jev_core.models import Approval, DomainError, Principal, RunRequest
-from jev_core.providers import FixturePlanner
+from jev_core.providers import FixturePlanner, configured_planner
 from jev_core.runtime import Harness
 from jev_core.store import Store
 from jev_core.telemetry import Telemetry
@@ -15,16 +15,17 @@ from jev_workflows.scenarios import SCENARIOS, seed
 from opentelemetry.sdk.trace.export.in_memory_span_exporter import InMemorySpanExporter
 
 
-async def run_lesson(number):
+async def run_lesson(number, live=False):
     with tempfile.TemporaryDirectory() as directory:
         store = Store(str(Path(directory) / "lesson.sqlite"))
         seed(store)
         p = Principal(tenant="demo", subject="learner", role="operator")
         reviewer = Principal(tenant="demo", subject="reviewer", role="reviewer")
-        registry = Registry()
+        planner = configured_planner(require_live=True) if live else FixturePlanner()
+        registry = Registry(getattr(planner, "router", None))
         exporter = InMemorySpanExporter()
         telemetry = Telemetry(exporter)
-        harness = Harness(store, registry, FixturePlanner(), telemetry)
+        harness = Harness(store, registry, planner, telemetry)
         try:
             scenario = "incident" if number in {2, 9} else "knowledge"
             state = store.create(
@@ -42,6 +43,15 @@ async def run_lesson(number):
                     "contract": registry.schemas("knowledge"),
                     "result": await tool.handler(store, p, args),
                 }
+            if number == 6 and live:
+                from jev_core.inference import InferenceSession, inference_scope
+                from jev_workflows.agents import llm_release_review
+
+                with inference_scope(InferenceSession(telemetry, state)):
+                    result = await llm_release_review(
+                        planner.router, "release", store.docs(p.tenant)
+                    )
+                return {"router_then_parallel_specialists": result, "inference": state["inference"]}
             if number == 6:
 
                 async def plan(goal):
@@ -66,9 +76,11 @@ async def run_lesson(number):
             if number == 8:
                 from jev_evals.runner import evaluate
 
-                return await evaluate()
+                return await evaluate(
+                    planner=planner if live else None, judge_router=getattr(planner, "router", None)
+                )
             state = await harness.run(p.tenant, state["id"])
-            if number == 9:
+            if number == 9 and state["status"] == "waiting":
                 proposed = state["pending"].copy()
                 store.approve(
                     reviewer,
