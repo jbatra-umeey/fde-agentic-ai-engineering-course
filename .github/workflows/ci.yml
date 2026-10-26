@@ -1,5 +1,8 @@
 name: Course reference validation
 on: [push, pull_request]
+concurrency:
+  group: course-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
@@ -17,6 +20,15 @@ jobs:
       - run: python -m pip install --no-deps -e .
       - run: make check test eval
       - run: python -m build
+      - name: Installed wheel smoke outside source tree
+        run: |
+          python -m venv /tmp/jev-wheel
+          /tmp/jev-wheel/bin/pip install -r requirements.lock dist/*.whl
+          cp scripts/package_smoke.py /tmp/jev-package-smoke.py
+          cd /tmp
+          /tmp/jev-wheel/bin/python jev-package-smoke.py
+      - run: python scripts/http_smoke.py
+      - run: jev-eval --adversarial --output reports/adversarial-evaluation.json
       - run: python scripts/dev_credentials.py
       - run: docker compose build
       - run: docker compose up -d --wait
@@ -28,4 +40,4 @@ jobs:
         if: always()
         with:
           name: evaluation-report
-          path: reports/evaluation.json
+          path: reports/*evaluation.json

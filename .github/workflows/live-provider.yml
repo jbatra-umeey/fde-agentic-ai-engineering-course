@@ -1,0 +1,30 @@
+name: Opt-in live provider validation
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_billable_calls:
+        description: 'Allow real model calls with synthetic course data'
+        type: boolean
+        required: true
+        default: false
+permissions:
+  contents: read
+jobs:
+  live-smoke:
+    if: inputs.confirm_billable_calls
+    environment: live-provider-validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.lock && python -m pip install --no-deps .
+      - run: python scripts/live_smoke.py
+        env:
+          JEV_RUN_LIVE_TESTS: '1'
+          JEV_PLANNER: http
+          JEV_MODEL_ENDPOINT: ${{ vars.JEV_MODEL_ENDPOINT }}
+          JEV_MODEL: ${{ vars.JEV_MODEL }}
+          JEV_MODEL_KEY: ${{ secrets.JEV_MODEL_KEY }}
