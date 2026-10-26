@@ -1,76 +1,83 @@
 {
-  "count": 14,
-  "checks": [
+  "parser": "mermaid",
+  "count": 19,
+  "passed": true,
+  "diagrams": [
     {
-      "file": "docs/ARCHITECTURE.md",
-      "block": 1,
-      "status": "syntax_passed"
+      "path": "docs/UPGRADE_ARCHITECTURE.md",
+      "index": 0
     },
     {
-      "file": "docs/ARCHITECTURE.md",
-      "block": 2,
-      "status": "syntax_passed"
+      "path": "docs/UPGRADE_ARCHITECTURE.md",
+      "index": 1
     },
     {
-      "file": "docs/ARCHITECTURE.md",
-      "block": 3,
-      "status": "syntax_passed"
+      "path": "docs/UPGRADE_ARCHITECTURE.md",
+      "index": 2
     },
     {
-      "file": "docs/ARCHITECTURE.md",
-      "block": 4,
-      "status": "syntax_passed"
+      "path": "docs/UPGRADE_ARCHITECTURE.md",
+      "index": 3
     },
     {
-      "file": "docs/modules/01-harness-engineering.md",
-      "block": 1,
-      "status": "syntax_passed"
+      "path": "docs/UPGRADE_ARCHITECTURE.md",
+      "index": 4
     },
     {
-      "file": "docs/modules/02-loop-engineering.md",
-      "block": 1,
-      "status": "syntax_passed"
+      "path": "docs/ARCHITECTURE.md",
+      "index": 0
     },
     {
-      "file": "docs/modules/03-context-engineering.md",
-      "block": 1,
-      "status": "syntax_passed"
+      "path": "docs/ARCHITECTURE.md",
+      "index": 1
     },
     {
-      "file": "docs/modules/04-tool-design.md",
-      "block": 1,
-      "status": "syntax_passed"
+      "path": "docs/ARCHITECTURE.md",
+      "index": 2
     },
     {
-      "file": "docs/modules/05-memory-architecture.md",
-      "block": 1,
-      "status": "syntax_passed"
+      "path": "docs/ARCHITECTURE.md",
+      "index": 3
     },
     {
-      "file": "docs/modules/06-orchestration-patterns.md",
-      "block": 1,
-      "status": "syntax_passed"
+      "path": "docs/modules/05-memory-architecture.md",
+      "index": 0
     },
     {
-      "file": "docs/modules/07-guardrails-and-permissions.md",
-      "block": 1,
-      "status": "syntax_passed"
+      "path": "docs/modules/03-context-engineering.md",
+      "index": 0
     },
     {
-      "file": "docs/modules/08-evals-for-agents.md",
-      "block": 1,
-      "status": "syntax_passed"
+      "path": "docs/modules/01-harness-engineering.md",
+      "index": 0
     },
     {
-      "file": "docs/modules/09-human-in-the-loop-design.md",
-      "block": 1,
-      "status": "syntax_passed"
+      "path": "docs/modules/04-tool-design.md",
+      "index": 0
     },
     {
-      "file": "docs/modules/10-observability-and-tracing.md",
-      "block": 1,
-      "status": "syntax_passed"
+      "path": "docs/modules/08-evals-for-agents.md",
+      "index": 0
+    },
+    {
+      "path": "docs/modules/06-orchestration-patterns.md",
+      "index": 0
+    },
+    {
+      "path": "docs/modules/02-loop-engineering.md",
+      "index": 0
+    },
+    {
+      "path": "docs/modules/07-guardrails-and-permissions.md",
+      "index": 0
+    },
+    {
+      "path": "docs/modules/09-human-in-the-loop-design.md",
+      "index": 0
+    },
+    {
+      "path": "docs/modules/10-observability-and-tracing.md",
+      "index": 0
     }
-  ],
-  "scope": "Mermaid syntax parsing; no graphical rendering performed."
+  ]
 }

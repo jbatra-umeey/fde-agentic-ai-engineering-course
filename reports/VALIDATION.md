@@ -1,37 +1,41 @@
-# Verification report
+# Upgrade verification report
 
-Final review date: 25 October 2026 (Asia/Kolkata). Python 3.12.14, Linux.
+Date: 25 October 2026 (Asia/Kolkata). Python 3.12.14, Linux. Version 0.2.0.
+Inspected starting commit: `b752521ae550aa1d4d7547fc95172fb2454dcc73`.
+The supplied live-inference ZIP overlay was inspected/applied, then extended with the provider, specialist, evaluation and telemetry implementation.
 
-## Executed checks
+## Executed checks on this upgrade
 
-| Check | Result | Evidence |
+| Check | Verified result | Evidence |
 |---|---|---|
-| Automated test suite | 53 passed; 0 failed | `tests.txt`, `tests.xml` |
-| Coverage across core, API, tools, workflows and evals | 92% rounded statement coverage | `coverage.json` |
-| Ten focused lessons | All ten executed by parametrized tests | `tests/test_lessons.py` |
-| Integrated evaluation | 5/5 scenarios passed all defined checks | `evaluation.json` |
-| Lint and formatting | Ruff checks passed | Reproducible commands in README |
-| Dependency consistency | `pip check` passed | Installed dependency constraints |
-| Package build | Wheel and source distribution built successfully | `build.txt` |
-| Installed-wheel smoke | All five scenarios succeeded from the installed wheel | `package-smoke.json` |
-| Real localhost HTTP API | Startup, create, independent review and anonymous denial passed | `package-smoke.json` |
-| SQLite online backup | Backup completed and integrity check passed | `package-smoke.json` |
-| Diagram syntax | 14 Mermaid blocks parsed successfully | `diagrams.json` |
+| Automated tests | 97 passed, 0 failed | [tests.txt](tests.txt), [JUnit XML](tests.xml) |
+| Coverage: core, API, tools, workflows, evals | 93.39% statement coverage; required threshold 85% | [coverage.json](coverage.json) |
+| Lint, formatting and Python compilation | Passed | Ruff check/format, compileall |
+| Golden regression evaluation | 5/5 passed | [evaluation.json](evaluation.json) |
+| Golden plus injection evaluation | 8/8 passed; baseline comparison passed | [adversarial-evaluation.json](adversarial-evaluation.json) |
+| Package build | Wheel and source distribution built | [build.txt](build.txt) |
+| Clean installed-wheel smoke | Four packaged prompts, ten lessons and eight evaluations passed outside source tree | [package-smoke.json](package-smoke.json) |
+| Real localhost HTTP API | Startup, health, auth denial, self-review denial and independent review passed | [http-smoke.json](http-smoke.json) |
+| Local OTLP HTTP delivery | Real trace/metric HTTP exports decoded and checked | `tests/test_otlp_export.py` |
+| Documentation links and basic credential-pattern scan | Passed | `scripts/check_repository.py` |
+| Mermaid syntax | 19 diagrams parsed with Mermaid | [diagrams.json](diagrams.json) |
+| Original course preservation | 49 original teaching/example/illustration files retained; illustration bytes unchanged | [preservation.json](preservation.json) |
+| Dependency consistency | `pip check` passed | Pinned requirements installed |
+| Workflow and Compose YAML syntax | All three workflows and two Compose files parsed | YAML parser |
 
-The test suite includes cross-tenant denial, invalid tool arguments, exact approval binding, self-review rejection, review expiry, concurrent duplicate approval, invoice revalidation, duplicate refunds, idempotency conflict, lease fencing, interruption recovery, iteration limits, timeout, citation validation, memory isolation/expiry/deletion, parallel cancellation, provider retry/response contracts, and telemetry metadata redaction.
+Provider contract tests cover both native HTTP protocols, legacy JSON mode, model routing/fallback, retries, schema failures, refusal/auth/redirect failure policy, deadlines, per-run concurrent accounting, cost arithmetic and redaction. Integration tests connect the actual HTTP planner to API/CLI/lessons, supervisor/specialists and judge with controlled HTTP transports. Tests also cover bounded argument/read-timeout recovery, denied injected actions, invalid specialist citations, API concurrency rejection and authoritative release-review requirements.
 
-The coverage figure excludes CLI scripts and does not imply every production failure mode is covered. The five evaluation cases are synthetic and deterministic. The live-model adapter was tested through mock HTTP transport, not a real hosted model.
+## Unverified external functionality and limitations
 
-## Warning and unexecuted work
-
-- One dependency deprecation warning: the installed Starlette TestClient warns about its HTTPX integration. Tests pass; track the dependency's migration guidance before the next upgrade.
-- Docker build, Compose startup, seeding and the API health check passed in [GitHub Actions run 40166920728](https://github.com/jbatra-umeey/fde-agentic-ai-engineering-course/actions/runs/40166920728) on commit `c626d82`. Image vulnerability scanning was not performed.
-- The published baseline passed hosted CI. Subsequent run results are available in the repository Actions tab.
-- External business-system integrations, actual model-provider compatibility, production load/SLOs, vulnerability auditing, penetration testing and collector/backend delivery were not tested.
-- Mermaid syntax was parsed. Ten PNG/SVG illustrations were rendered and visually reviewed; the SVG sources contain no footer labels.
-
-An initial tracing walkthrough failed because environment sampling omitted spans. The in-memory teaching/test exporter now uses explicit always-on sampling; the final suite passes. Production exporter sampling continues to use standard OpenTelemetry configuration.
+- No OpenAI, Anthropic or legacy model credentials were configured. No live model request, semantic-quality result or judge calibration is claimed. Controlled transports test contracts, not real-provider compatibility.
+- Docker is unavailable in the local execution environment. Docker build, Compose startup/seeding and container health are configured in PR CI; consult the PR checks for this exact commit. Earlier baseline CI is not evidence for this upgrade.
+- The release workflow is defined and YAML-parsed but has not published an image or deployed an environment. The manual billable-provider workflow has not run.
+- Local OTLP exporter delivery passed; delivery to a hosted collector/backend, dashboards and alerting remain untested.
+- Real Jira/payment/source connectors, OIDC, distributed quotas/persistence, production load/SLOs, penetration testing and vulnerability-policy enforcement remain deployment work.
+- Cost is a base-token estimate from operator-configured rates. Missing usage/prices remain unknown; provider invoice reconciliation and hard monetary quotas are not implemented.
+- Golden and injection cases are synthetic. Fixture success and contract tests do not establish prompt-injection immunity, real-model quality or factual entailment.
+- One upstream TestClient deprecation warning remains: Starlette warns about its HTTPX integration. All tests pass.
 
 ## Reproduce
 
-Use the pinned dependency setup in README, then run the check/test/eval/build commands. Keep your own report with environment, commit or source checksum, actual results and deployment-specific gaps. Do not reuse this report as evidence for a changed artifact or customer environment.
+Follow the pinned setup in README, then run `make check test eval`, `jev-eval --adversarial`, `python -m build`, `python scripts/http_smoke.py`, and the installed-wheel smoke described in CI. Use `python scripts/check_course_preservation.py --base b752521 --output reports/preservation.json` to audit original material. Enable live integration only with configured credentials and explicit opt-in. See [readiness gaps](../docs/PRODUCTION_READINESS.md).

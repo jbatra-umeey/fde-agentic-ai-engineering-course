@@ -1,7 +1,14 @@
 {
   "mode": "fixture",
+  "prompt": {
+    "name": "planner",
+    "version": "v1",
+    "sha256": "d8b280bed85dea877f546de6b656e8bb51a61e275f53b862425c6bc20fcac49e"
+  },
+  "judge_enabled": false,
   "cases": [
     {
+      "id": "golden-1",
       "scenario": "knowledge",
       "checks": {
         "outcome": true,
@@ -11,10 +18,22 @@
         "budget": true
       },
       "passed": true,
-      "latency_ms": 24.02,
-      "steps": 2
+      "latency_ms": 29.84,
+      "steps": 2,
+      "judge": null,
+      "judge_error": null,
+      "usage": {
+        "attempts": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "known_cost_usd": 0,
+        "unpriced_attempts": 0,
+        "unknown_usage_attempts": 0,
+        "latency_ms_sum": 0
+      }
     },
     {
+      "id": "golden-2",
       "scenario": "incident",
       "checks": {
         "outcome": true,
@@ -24,10 +43,22 @@
         "budget": true
       },
       "passed": true,
-      "latency_ms": 35.62,
-      "steps": 3
+      "latency_ms": 39.51,
+      "steps": 3,
+      "judge": null,
+      "judge_error": null,
+      "usage": {
+        "attempts": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "known_cost_usd": 0,
+        "unpriced_attempts": 0,
+        "unknown_usage_attempts": 0,
+        "latency_ms_sum": 0
+      }
     },
     {
+      "id": "golden-3",
       "scenario": "mobile_performance",
       "checks": {
         "outcome": true,
@@ -37,10 +68,22 @@
         "budget": true
       },
       "passed": true,
-      "latency_ms": 48.58,
-      "steps": 3
+      "latency_ms": 42.52,
+      "steps": 3,
+      "judge": null,
+      "judge_error": null,
+      "usage": {
+        "attempts": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "known_cost_usd": 0,
+        "unpriced_attempts": 0,
+        "unknown_usage_attempts": 0,
+        "latency_ms_sum": 0
+      }
     },
     {
+      "id": "golden-4",
       "scenario": "refund",
       "checks": {
         "outcome": true,
@@ -50,10 +93,22 @@
         "budget": true
       },
       "passed": true,
-      "latency_ms": 31.88,
-      "steps": 3
+      "latency_ms": 40.64,
+      "steps": 3,
+      "judge": null,
+      "judge_error": null,
+      "usage": {
+        "attempts": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "known_cost_usd": 0,
+        "unpriced_attempts": 0,
+        "unknown_usage_attempts": 0,
+        "latency_ms_sum": 0
+      }
     },
     {
+      "id": "golden-5",
       "scenario": "release",
       "checks": {
         "outcome": true,
@@ -63,13 +118,24 @@
         "budget": true
       },
       "passed": true,
-      "latency_ms": 61.65,
-      "steps": 2
+      "latency_ms": 48.91,
+      "steps": 2,
+      "judge": null,
+      "judge_error": null,
+      "usage": {
+        "attempts": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "known_cost_usd": 0,
+        "unpriced_attempts": 0,
+        "unknown_usage_attempts": 0,
+        "latency_ms_sum": 0
+      }
     }
   ],
   "passed": 5,
   "total": 5,
   "gate": true,
   "feedback": [],
-  "limitations": "Synthetic deterministic evaluation; not evidence of live-model quality or production SLOs."
+  "limitations": "Synthetic cases and simulated independent review, including in live mode. Exact tool order is a strict regression gate; judge calibration, held-out customer data and repeated provider runs remain required."
 }
